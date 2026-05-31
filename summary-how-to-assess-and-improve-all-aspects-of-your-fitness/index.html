@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Episode 2: Optimal Protocols to Build Strength & Grow Muscles</title>
+<title>Episode 1: How to Assess & Improve All Aspects of Your Fitness</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
 
@@ -22,8 +22,6 @@
     --green: #22c55e;
     --red: #ef4444;
     --yellow: #eab308;
-    --blue: #3b82f6;
-    --amber: #f59e0b;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -52,11 +50,14 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse at 20% 50%, rgba(249, 115, 22, 0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 50%, rgba(59, 130, 246, 0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 50%, rgba(45, 212, 191, 0.06) 0%, transparent 60%);
   }
 
-  .hero-content { position: relative; max-width: 800px; }
+  .hero-content {
+    position: relative;
+    max-width: 800px;
+  }
 
   .hero-badge {
     display: inline-block;
@@ -67,7 +68,7 @@
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--orange);
+    color: var(--teal);
     margin-bottom: 2rem;
   }
 
@@ -77,7 +78,7 @@
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #fff 0%, #fdba74 50%, #f97316 100%);
+    background: linear-gradient(135deg, #fff 0%, #c4b5fd 50%, #6366f1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -100,15 +101,28 @@
     color: var(--text-muted);
   }
 
-  .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-  section { padding: 5rem 0; }
+  .hero-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  section {
+    padding: 5rem 0;
+  }
 
   .section-label {
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--orange);
+    color: var(--accent);
     margin-bottom: 1rem;
   }
 
@@ -120,8 +134,18 @@
     line-height: 1.2;
   }
 
-  h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; }
-  p { color: var(--text-muted); margin-bottom: 1.2rem; font-size: 1.05rem; }
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+
+  p {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+  }
 
   .full-image {
     width: 100%;
@@ -130,7 +154,13 @@
     border: 1px solid var(--border);
   }
 
-  .takeaways { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin: 2rem 0; }
+  /* Key Takeaways Grid */
+  .takeaways {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
 
   .takeaway {
     background: var(--surface);
@@ -140,7 +170,10 @@
     transition: border-color 0.3s, transform 0.2s;
   }
 
-  .takeaway:hover { border-color: var(--orange); transform: translateY(-2px); }
+  .takeaway:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
 
   .takeaway-number {
     display: inline-flex;
@@ -157,6 +190,47 @@
   .takeaway h3 { margin-bottom: 0.5rem; }
   .takeaway p { margin-bottom: 0; font-size: 0.95rem; }
 
+  /* Adaptation Cards */
+  .adaptations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .adaptation-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  .adaptation-card:hover {
+    border-color: var(--accent);
+    background: var(--surface-2);
+  }
+
+  .adaptation-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .adaptation-card h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  .adaptation-card p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* Stat Cards */
   .stats-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -179,13 +253,63 @@
     margin-bottom: 0.3rem;
   }
 
-  .stat-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
 
+  /* Benchmark Table */
+  .benchmark-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+  }
+
+  .benchmark-table thead {
+    background: var(--surface-2);
+  }
+
+  .benchmark-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .benchmark-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+
+  .benchmark-table tr:hover td {
+    background: var(--surface);
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .badge-green { background: rgba(34, 197, 94, 0.15); color: var(--green); }
+  .badge-yellow { background: rgba(234, 179, 8, 0.15); color: var(--yellow); }
+  .badge-red { background: rgba(239, 68, 68, 0.15); color: var(--red); }
+
+  /* Quote */
   blockquote {
-    border-left: 3px solid var(--orange);
+    border-left: 3px solid var(--accent);
     padding: 1.5rem 2rem;
     margin: 2rem 0;
-    background: rgba(249, 115, 22, 0.08);
+    background: var(--accent-glow);
     border-radius: 0 12px 12px 0;
     font-size: 1.1rem;
     font-style: italic;
@@ -200,12 +324,14 @@
     color: var(--text-muted);
   }
 
+  /* Divider */
   .divider {
     height: 1px;
     background: linear-gradient(to right, transparent, var(--border), transparent);
     margin: 3rem 0;
   }
 
+  /* Study Card */
   .study-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -214,74 +340,20 @@
     margin: 2rem 0;
   }
 
-  .study-card img { width: 100%; display: block; }
-  .study-card-body { padding: 2rem; }
-  .study-card-body h3 { margin-bottom: 0.8rem; }
-
-  /* Comparison Table */
-  .compare-table {
+  .study-card img {
     width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    font-size: 0.9rem;
+    display: block;
   }
 
-  .compare-table thead { background: var(--surface-2); }
-
-  .compare-table th {
-    padding: 1rem;
-    text-align: left;
-    font-weight: 600;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-muted);
-    border-bottom: 1px solid var(--border);
+  .study-card-body {
+    padding: 2rem;
   }
 
-  .compare-table td {
-    padding: 1rem;
-    border-bottom: 1px solid var(--border);
-    color: var(--text-muted);
+  .study-card-body h3 {
+    margin-bottom: 0.8rem;
   }
 
-  .compare-table tr:hover td { background: var(--surface); }
-
-  .badge {
-    display: inline-block;
-    padding: 0.2rem 0.6rem;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
-
-  .badge-blue { background: rgba(59, 130, 246, 0.15); color: var(--blue); }
-  .badge-amber { background: rgba(245, 158, 11, 0.15); color: var(--amber); }
-  .badge-green { background: rgba(34, 197, 94, 0.15); color: var(--green); }
-  .badge-teal { background: rgba(45, 212, 191, 0.15); color: var(--teal); }
-
-  /* 3-5 Grid */
-  .rule-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
-  }
-
-  .rule-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: all 0.3s;
-  }
-
-  .rule-card:hover { border-color: var(--orange); background: var(--surface-2); }
-  .rule-icon { font-size: 2rem; margin-bottom: 0.5rem; }
-  .rule-card h4 { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; }
-  .rule-card p { font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.4; }
-
+  /* Footer */
   .footer {
     text-align: center;
     padding: 4rem 2rem;
@@ -290,7 +362,11 @@
     font-size: 0.85rem;
   }
 
-  .footer a { color: var(--orange); text-decoration: none; }
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
   .footer a:hover { text-decoration: underline; }
 
   .yt-link {
@@ -309,36 +385,29 @@
 
   .yt-link:hover { opacity: 0.9; text-decoration: none; }
 
-  .nav-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    transition: all 0.2s;
-    margin: 0 0.3rem;
-  }
-
-  .nav-link:hover { border-color: var(--orange); color: var(--text); }
-
+  /* Responsive */
   @media (max-width: 768px) {
-    .rule-grid { grid-template-columns: repeat(2, 1fr); }
+    .adaptations-grid { grid-template-columns: repeat(2, 1fr); }
     .stats-row { grid-template-columns: 1fr 1fr; }
     section { padding: 3rem 0; }
+    .benchmark-table { font-size: 0.8rem; }
+    .benchmark-table th, .benchmark-table td { padding: 0.7rem; }
+  }
+
+  @media (max-width: 480px) {
+    .adaptations-grid { grid-template-columns: 1fr 1fr; }
+    .hero-meta { flex-direction: column; align-items: center; gap: 0.5rem; }
   }
 </style>
 </head>
 <body>
 
+<!-- HERO -->
 <header class="hero">
   <div class="hero-content">
-    <div class="hero-badge">Episode 2 of 6 &middot; Guest Series</div>
-    <h1>Optimal Protocols to Build Strength &amp; Grow Muscles</h1>
-    <p class="hero-subtitle">Dr. Galpin delivers the complete playbook for strength and hypertrophy — from the molecular mechanisms of muscle growth to the exact sets, reps, and rest periods that drive each adaptation.</p>
+    <div class="hero-badge">Episode 1 of 6 &middot; Guest Series</div>
+    <h1>How to Assess &amp; Improve All Aspects of Your Fitness</h1>
+    <p class="hero-subtitle">Dr. Andy Galpin breaks down the 9 fundamental fitness adaptations, how to test each one, and the science of why doing only one type of exercise leaves critical gaps.</p>
     <div class="hero-meta">
       <span>Dr. Andrew Huberman &amp; Dr. Andy Galpin</span>
       <span>Huberman Lab Podcast</span>
@@ -348,276 +417,272 @@
 
 <main class="container">
 
-  <!-- WHY STRENGTH TRAIN -->
+  <!-- THE BIG IDEA -->
   <section>
-    <div class="section-label">The Case for Lifting</div>
-    <h2>Strength training isn't optional — it's the only way to fight neuromuscular aging</h2>
+    <div class="section-label">The Big Idea</div>
+    <h2>There are 9 adaptations. You need all of them.</h2>
+    <p>Most people's exercise routines are siloed — they only run, or only lift, or only do yoga. Dr. Galpin's central thesis is that physical fitness isn't one thing. It's nine distinct physiological adaptations, each requiring specific training stimulus. Focusing on just one leaves critical gaps that directly impact your health, longevity, and daily function.</p>
 
-    <img src="images/neuromuscular-aging.png" alt="Neuromuscular aging timeline" class="full-image">
+    <blockquote>
+      "The methods are many, but the concepts are few. If you understand the concepts, you can design your own methods."
+      <cite>— Dr. Andy Galpin</cite>
+    </blockquote>
 
-    <p>The single most important message of this episode: <strong style="color: var(--text);">resistance exercise is the #1 tool to combat neuromuscular aging</strong>, and no other form of exercise can replace it. The decline isn't just about muscle size — strength and power erode far faster.</p>
+    <img src="images/nine-adaptations.png" alt="The 9 Fitness Adaptations" class="full-image">
 
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--yellow);">~1%</div>
-        <div class="stat-label">Muscle size loss per year after 40</div>
+    <div class="adaptations-grid">
+      <div class="adaptation-card">
+        <div class="adaptation-icon">🎯</div>
+        <h4>Skill</h4>
+        <p>Moving efficiently with proper technique</p>
       </div>
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--orange);">2-4%</div>
-        <div class="stat-label">Strength loss per year after 40</div>
+      <div class="adaptation-card">
+        <div class="adaptation-icon">⚡</div>
+        <h4>Speed</h4>
+        <p>Higher velocity &amp; rate of acceleration</p>
       </div>
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--red);">8-10%</div>
-        <div class="stat-label">Muscle power loss per year after 40</div>
+      <div class="adaptation-card">
+        <div class="adaptation-icon">💥</div>
+        <h4>Power</h4>
+        <p>Speed &times; Force — explosive output</p>
       </div>
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--green);">30-40%</div>
-        <div class="stat-label">Motor unit reduction in older adults</div>
+      <div class="adaptation-card">
+        <div class="adaptation-icon">🏋️</div>
+        <h4>Strength</h4>
+        <p>Maximum force production, one-rep max</p>
+      </div>
+      <div class="adaptation-card">
+        <div class="adaptation-icon">💪</div>
+        <h4>Hypertrophy</h4>
+        <p>Muscle size — the only aesthetic adaptation</p>
+      </div>
+      <div class="adaptation-card">
+        <div class="adaptation-icon">🔁</div>
+        <h4>Muscular Endurance</h4>
+        <p>5-50 reps, localized to specific muscles</p>
+      </div>
+      <div class="adaptation-card">
+        <div class="adaptation-icon">🔥</div>
+        <h4>Anaerobic Capacity</h4>
+        <p>All-out effort for 30-120 seconds</p>
+      </div>
+      <div class="adaptation-card">
+        <div class="adaptation-icon">🫁</div>
+        <h4>VO2 Max</h4>
+        <p>Maximal aerobic capacity, 8-15 min range</p>
+      </div>
+      <div class="adaptation-card">
+        <div class="adaptation-icon">🛤️</div>
+        <h4>Long Duration</h4>
+        <p>Sustained sub-max work, 20-60+ minutes</p>
       </div>
     </div>
 
-    <blockquote>
-      "If you have a body, you're an athlete. One of the major disservices we've done in this field is convince people that strength training is for athletes or for growing bigger muscles."
-      <cite>— Dr. Andy Galpin (quoting Bill Bowerman, Nike co-founder)</cite>
-    </blockquote>
-
-    <p>The encouraging news: <strong style="color: var(--text);">it's never too late to start.</strong> A study on people over 90 showed 30-170% improvements in muscle size and strength in just 12 weeks. The decline isn't an inevitable consequence of aging — it's almost entirely due to loss of training.</p>
+    <p><strong style="color: var(--text);">Fat loss and general health are NOT separate adaptations</strong> — they're byproducts of training these nine. Your personal "health protocol" depends on which of the nine you're weakest in.</p>
   </section>
 
   <div class="divider"></div>
 
-  <!-- STRENGTH VS HYPERTROPHY -->
+  <!-- THE SWEDISH SKIERS -->
   <section>
-    <div class="section-label">Key Distinction</div>
-    <h2>Strength vs. Hypertrophy: Related but different</h2>
+    <div class="section-label">Landmark Study #1</div>
+    <h2>The 90-Year-Old Swedish Skiers</h2>
 
-    <img src="images/strength-vs-hypertrophy.png" alt="Strength vs Hypertrophy training comparison" class="full-image">
+    <div class="study-card">
+      <img src="images/swedish-skiers.png" alt="Elderly Swedish cross-country skiers">
+      <div class="study-card-body">
+        <h3>Lifelong endurance exercise: incredible cardiovascular fitness, but missing leg strength</h3>
+        <p>At the Karolinska Institute in Stockholm, Dr. Galpin studied competitive cross-country skiers in their 80s and 90s — former Olympic gold medalists who had been skiing consistently for 50-60 years. Their VO2 max results were stunning.</p>
+      </div>
+    </div>
 
-    <p>This is the episode's foundational distinction. <strong style="color: var(--text);">Strength is a function</strong> (how much force you can produce). <strong style="color: var(--text);">Hypertrophy is a structure</strong> (how big the muscle is). They often come together, but they require different training protocols and operate through different mechanisms.</p>
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-number" style="color: var(--red);">~20</div>
+        <div class="stat-label">VO2 Max — Non-exercisers (80s)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="color: var(--green);">35-38</div>
+        <div class="stat-label">VO2 Max — Lifelong skiers (80s-90s)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="color: var(--yellow);">~35</div>
+        <div class="stat-label">VO2 Max — Average college male</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="color: var(--teal);">18</div>
+        <div class="stat-label">VO2 Max — Line of independence</div>
+      </div>
+    </div>
 
-    <table class="compare-table">
+    <p>A 92-year-old skier recorded a VO2 max of 38 ml/kg/min — believed to be a <strong style="color: var(--text);">world record</strong> for anyone over 90. These elderly skiers had the cardiovascular fitness of average college students.</p>
+    <p>But here's the catch: <strong style="color: var(--orange);">their leg strength and functionality was no better than non-exercisers of the same age.</strong> Decades of endurance-only training left massive gaps in strength, power, and fast-twitch muscle fiber maintenance.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- TWIN STUDY -->
+  <section>
+    <div class="section-label">Landmark Study #2</div>
+    <h2>The Identical Twin Experiment</h2>
+
+    <div class="study-card">
+      <img src="images/twin-study.png" alt="Identical twins — runner vs sedentary">
+      <div class="study-card-body">
+        <h3>Same DNA, 35 years apart in lifestyle — the results confirm the Swedish findings</h3>
+        <p>Dr. Galpin's graduate student casually mentioned her uncle and father were identical (monozygous) twins — one a lifelong endurance athlete, the other a sedentary truck driver. This was, as Galpin put it, "the perfect scientific experiment."</p>
+      </div>
+    </div>
+
+    <p>After 35 years of divergent lifestyles, the team ran every test imaginable: VO2 max, blood panels, muscle biopsies, MRIs, strength tests, vertical jump, even IQ and psychological batteries.</p>
+
+    <div class="takeaways">
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(34, 197, 94, 0.15); color: var(--green);">✓</div>
+        <h3>Where the exerciser won</h3>
+        <p>VO2 max, lipid panel, resting heart rate, blood pressure — all cardiovascular markers were <strong style="color: var(--text);">significantly better</strong> in the endurance twin. Slightly leaner body composition too.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(239, 68, 68, 0.15); color: var(--red);">✗</div>
+        <h3>Where the exerciser lost</h3>
+        <p>Grip strength, vertical jump, leg extension power — the <strong style="color: var(--text);">non-exercising twin was stronger</strong> in multiple functional tests. Total muscle mass was nearly identical between both.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(234, 179, 8, 0.15); color: var(--yellow);">!</div>
+        <h3>The muscle fiber revelation</h3>
+        <p>The non-exerciser had ~50% slow-twitch fibers (textbook normal). The lifelong runner had <strong style="color: var(--text);">95% slow-twitch</strong> — a near-complete conversion showing "the limits of physiological adaptation are darn near boundless."</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- MUSCLE FIBERS -->
+  <section>
+    <div class="section-label">The Science</div>
+    <h2>Fast-Twitch vs. Slow-Twitch: Why It Matters for Aging</h2>
+
+    <img src="images/muscle-fibers.png" alt="Fast-twitch vs slow-twitch muscle fibers" class="full-image">
+
+    <p>A hallmark of aging is the <strong style="color: var(--text);">selective loss of fast-twitch muscle fibers</strong>. These fibers are only activated during high-force or explosive movements. Without that stimulus, the body discards them.</p>
+    <p>This is critical because fast-twitch fibers give you:</p>
+    <div class="takeaways">
+      <div class="takeaway">
+        <h3>The speed to catch yourself from a fall</h3>
+        <p>Getting your foot out in front of you fast enough requires fast-twitch recruitment. Slow-twitch fibers simply can't fire quickly enough.</p>
+      </div>
+      <div class="takeaway">
+        <h3>The eccentric strength to absorb impact</h3>
+        <p>Once your foot is planted, you need the braking force to stop the fall. This is an eccentric contraction that depends on Type II fibers.</p>
+      </div>
+    </div>
+    <p>Endurance training alone does not preserve fast-twitch fibers. Only high-force activities — heavy lifting, sprinting, explosive movements — keep them around as you age.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FITNESS TESTS -->
+  <section>
+    <div class="section-label">Actionable Tests</div>
+    <h2>Dr. Galpin's Fitness Benchmarks</h2>
+    <p>These are the at-home tests and target numbers Dr. Galpin recommends. No equipment or lab needed — just honest self-assessment.</p>
+
+    <img src="images/fitness-tests.png" alt="Fitness assessment tests" class="full-image">
+
+    <table class="benchmark-table">
       <thead>
         <tr>
-          <th>Variable</th>
-          <th><span class="badge badge-blue">Strength</span></th>
-          <th><span class="badge badge-amber">Hypertrophy</span></th>
+          <th>Test</th>
+          <th>What It Measures</th>
+          <th>Target (M)</th>
+          <th>Target (F)</th>
+          <th>Red Flag</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong style="color: var(--text);">Primary driver</strong></td>
-          <td>Neural adaptation — motor unit recruitment, firing rate</td>
-          <td>Muscle protein synthesis — mechanical tension on the cell</td>
+          <td><strong style="color: var(--text);">Resting Heart Rate</strong></td>
+          <td>Cardiovascular health</td>
+          <td><span class="badge badge-green">&lt; 60 bpm</span></td>
+          <td><span class="badge badge-green">&lt; 60 bpm</span></td>
+          <td><span class="badge badge-red">&gt; 75 bpm</span></td>
         </tr>
         <tr>
-          <td><strong style="color: var(--text);">Rep range</strong></td>
-          <td><span class="badge badge-blue">1-5 reps</span></td>
-          <td><span class="badge badge-amber">5-30 reps</span></td>
+          <td><strong style="color: var(--text);">Dead Hang</strong></td>
+          <td>Grip strength / endurance</td>
+          <td><span class="badge badge-green">40+ sec</span></td>
+          <td><span class="badge badge-green">30+ sec</span></td>
+          <td><span class="badge badge-red">&lt; 20 sec</span></td>
         </tr>
         <tr>
-          <td><strong style="color: var(--text);">Load</strong></td>
-          <td>70-100% of 1RM</td>
-          <td>30-85% of 1RM</td>
+          <td><strong style="color: var(--text);">Push-ups (no pause)</strong></td>
+          <td>Upper body muscular endurance</td>
+          <td><span class="badge badge-green">25+</span></td>
+          <td><span class="badge badge-green">15+</span></td>
+          <td><span class="badge badge-red">&lt; 10 / &lt; 5</span></td>
         </tr>
         <tr>
-          <td><strong style="color: var(--text);">Rest periods</strong></td>
-          <td>3-5 minutes</td>
-          <td>30 seconds - 2 minutes</td>
+          <td><strong style="color: var(--text);">Front Squat Hold</strong></td>
+          <td>Leg strength / mobility</td>
+          <td colspan="2"><span class="badge badge-green">⅓ body weight for 45 sec</span></td>
+          <td><span class="badge badge-red">Can't hold position</span></td>
         </tr>
         <tr>
-          <td><strong style="color: var(--text);">Rep cadence</strong></td>
-          <td>3:1:1 (explode on concentric)</td>
-          <td>3:1:2 (controlled throughout)</td>
+          <td><strong style="color: var(--text);">Plank (front)</strong></td>
+          <td>Core muscular endurance</td>
+          <td colspan="2"><span class="badge badge-green">60 sec</span></td>
+          <td><span class="badge badge-red">&lt; 30 sec</span></td>
         </tr>
         <tr>
-          <td><strong style="color: var(--text);">Train to failure?</strong></td>
-          <td>Not required (technical failure OK)</td>
-          <td>Beneficial, especially for advanced</td>
+          <td><strong style="color: var(--text);">Side Plank</strong></td>
+          <td>Lateral core endurance</td>
+          <td colspan="2"><span class="badge badge-green">45 sec each side</span></td>
+          <td><span class="badge badge-red">&lt; 20 sec</span></td>
         </tr>
         <tr>
-          <td><strong style="color: var(--text);">Exercise selection</strong></td>
-          <td>Compound lifts, movement patterns</td>
-          <td>Compounds + isolation, muscle-specific</td>
-        </tr>
-        <tr>
-          <td><strong style="color: var(--text);">Recovery</strong></td>
-          <td>24-48 hours (lower volume)</td>
-          <td>48-72 hours (higher volume/damage)</td>
+          <td><strong style="color: var(--text);">FFMI</strong></td>
+          <td>Sufficient muscle mass</td>
+          <td><span class="badge badge-green">&ge; 20</span></td>
+          <td><span class="badge badge-green">&ge; 18</span></td>
+          <td><span class="badge badge-red">&lt; 17 / &lt; 15</span></td>
         </tr>
       </tbody>
     </table>
 
-    <p><strong style="color: var(--text);">The key insight:</strong> Exercises don't determine adaptation — <em>how you execute them</em> does. A deadlift can build strength, hypertrophy, or power depending on the load, rep range, speed, and rest you choose.</p>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- THE SCIENCE -->
-  <section>
-    <div class="section-label">The Science</div>
-    <h2>How muscles actually get stronger and bigger</h2>
-
-    <img src="images/protein-synthesis.png" alt="Muscle protein synthesis and mTOR pathway" class="full-image">
-
-    <div class="takeaways">
-      <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(59, 130, 246, 0.15); color: var(--blue);">1</div>
-        <h3>Strength = neural efficiency (not just bigger muscles)</h3>
-        <p>Getting stronger is primarily about your nervous system learning to recruit more motor units, fire them faster, and coordinate them better. This is why beginners can gain significant strength without visible muscle growth — it's a neural adaptation first.</p>
-      </div>
-      <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(245, 158, 11, 0.15); color: var(--amber);">2</div>
-        <h3>Hypertrophy = mechanical tension triggers mTOR</h3>
-        <p>Muscle growth happens when mechanical tension stretches the cell wall, activating the mTOR signaling pathway. This triggers muscle protein synthesis — the process of building new contractile proteins inside the fiber, making it physically larger.</p>
-      </div>
-      <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(34, 197, 94, 0.15); color: var(--green);">3</div>
-        <h3>mTOR vs. AMPK: the interference effect</h3>
-        <p>Strength/hypertrophy training activates the <strong style="color: var(--text);">mTOR pathway</strong> (anabolic — build). Endurance training activates <strong style="color: var(--text);">AMPK</strong> (catabolic — break down for energy). Doing both simultaneously can create interference, which is why programming order and timing matter.</p>
-      </div>
-      <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(45, 212, 191, 0.15); color: var(--teal);">4</div>
-        <h3>Protein alone is anabolic</h3>
-        <p>Eating protein stimulates muscle protein synthesis for 4-5+ hours — even without training. This is why protein intake is so critical. But combining protein with training creates a much larger and longer-lasting anabolic response.</p>
-      </div>
-      <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(236, 72, 153, 0.15); color: var(--pink);">5</div>
-        <h3>Muscle is an organ system</h3>
-        <p>Beyond movement, muscle plays critical roles in immune regulation, blood glucose control, amino acid storage, and whole-body homeostasis. This is why maintaining muscle mass is a health priority, not just an aesthetic one.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- THE 3-TO-5 CONCEPT -->
-  <section>
-    <div class="section-label">The Framework</div>
-    <h2>The 3-to-5 Concept: Galpin's strength protocol in one rule</h2>
-
-    <img src="images/three-to-five.png" alt="The 3-to-5 Concept" class="full-image">
-
-    <p>For strength, speed, and power training, Galpin simplifies the entire program design into one elegant rule: <strong style="color: var(--text);">everything is 3 to 5.</strong></p>
-
-    <div class="rule-grid">
-      <div class="rule-card">
-        <div class="rule-icon">📅</div>
-        <h4>3-5 days/week</h4>
-        <p>Training frequency</p>
-      </div>
-      <div class="rule-card">
-        <div class="rule-icon">🏋️</div>
-        <h4>3-5 exercises</h4>
-        <p>Per session</p>
-      </div>
-      <div class="rule-card">
-        <div class="rule-icon">🔢</div>
-        <h4>3-5 reps</h4>
-        <p>Per set</p>
-      </div>
-      <div class="rule-card">
-        <div class="rule-icon">📊</div>
-        <h4>3-5 sets</h4>
-        <p>Per exercise</p>
-      </div>
-      <div class="rule-card">
-        <div class="rule-icon">⏱️</div>
-        <h4>3-5 min rest</h4>
-        <p>Between sets</p>
-      </div>
-    </div>
-
-    <p>Progressive overload: increase load by <strong style="color: var(--text);">3-5% per week</strong>. This framework makes program design simple and memorable while hitting the exact parameters proven to build strength.</p>
-
     <blockquote>
-      "The methods are many, but the concepts are few. If you nail the concepts, the specific methods matter far less than people think."
+      "If your resting heart rate is 75 beats per minute, there's either something going on or you're not fit. 60 to 80 is 'normal' — I don't agree with that at all."
       <cite>— Dr. Andy Galpin</cite>
     </blockquote>
   </section>
 
   <div class="divider"></div>
 
-  <!-- EXERCISE SELECTION -->
+  <!-- HISTORY -->
   <section>
-    <div class="section-label">Program Design</div>
-    <h2>Think in movement patterns, not muscles</h2>
-
-    <img src="images/movement-patterns.png" alt="The four movement patterns" class="full-image">
-
-    <p>For strength training, Galpin recommends organizing exercises by <strong style="color: var(--text);">movement patterns</strong> rather than individual muscles. This ensures balanced development and reduces injury risk.</p>
-
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--teal); font-size: 1.5rem;">PUSH</div>
-        <div class="stat-label">Bench press, overhead press, push-ups</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--orange); font-size: 1.5rem;">PULL</div>
-        <div class="stat-label">Rows, pull-ups, face pulls</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--pink); font-size: 1.5rem;">HINGE</div>
-        <div class="stat-label">Deadlifts, RDLs, hip thrusts</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--green); font-size: 1.5rem;">SQUAT</div>
-        <div class="stat-label">Front/back squat, lunges, leg press</div>
-      </div>
-    </div>
-
-    <p><strong style="color: var(--text);">Stick with the same exercises for 6-12 weeks minimum.</strong> It takes ~3 weeks just to establish your groove, loading, and soreness patterns before meaningful progression begins. The conjugate approach — small variations of the same movement (grip width, bar type, ROM) — gives you specificity while avoiding repetitive strain.</p>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- PERIODIZATION -->
-  <section>
-    <div class="section-label">Programming</div>
-    <h2>Periodization: linear vs. undulating</h2>
-
-    <p>How you organize training across weeks and months matters as much as what you do in a single session. Galpin covers two major approaches:</p>
+    <div class="section-label">Context</div>
+    <h2>The History That Shapes How You Exercise</h2>
+    <p>A fascinating throughline of the episode is how the <strong style="color: var(--text);">history of exercise science</strong> explains why most people's programs are suboptimal. Galpin traces the arc:</p>
 
     <div class="takeaways">
       <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(59, 130, 246, 0.15); color: var(--blue);">A</div>
-        <h3>Linear Periodization</h3>
-        <p>Focus on one adaptation at a time for 6-8 weeks (e.g., hypertrophy block → strength block → power block). <strong style="color: var(--text);">Pro:</strong> Maximum specificity. <strong style="color: var(--text);">Con:</strong> You lose the other adaptations while you focus. Best for competitive athletes with specific peaking goals.</p>
+        <h3>1880s-1950s: The Harvard Fatigue Lab era</h3>
+        <p>Holistic view of human performance — scientists studied the body as a whole system, advocating a combination of strength and endurance. The "Exercise As Medicine" movement originated here.</p>
       </div>
       <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(245, 158, 11, 0.15); color: var(--amber);">B</div>
-        <h3>Undulating Periodization</h3>
-        <p>Train multiple adaptations within the same week (e.g., Monday = power, Wednesday = hypertrophy, Friday = strength). <strong style="color: var(--text);">Pro:</strong> Maintains all fitness qualities simultaneously. <strong style="color: var(--text);">Con:</strong> Less maximal progress in any single area. Best for general fitness and health.</p>
+        <h3>1953-1970s: The Aerobics Revolution</h3>
+        <p>Kenneth Cooper's "Aerobics" book and the jogging boom convinced an entire generation that cardio was the only exercise that mattered. Strength training was dismissed or feared.</p>
+      </div>
+      <div class="takeaway">
+        <h3>1970s-2000s: The Bodybuilding Era</h3>
+        <p>Arnold Schwarzenegger and the gym culture made lifting mainstream — but framed every exercise decision through the lens of maximizing muscle size. This created the assumption that all weight training = hypertrophy training.</p>
+      </div>
+      <div class="takeaway">
+        <h3>2000s-Present: CrossFit & Functional Fitness</h3>
+        <p>Filled gaps by combining modalities, but introduced new issues. The pendulum is now "slowly shifting into the middle" — picking optimal protocols from each discipline for specific adaptations.</p>
       </div>
     </div>
 
-    <p>For most people pursuing health and longevity, Galpin favors an undulating approach — it keeps you well-rounded across all adaptations rather than sacrificing one to peak in another.</p>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- PRACTICAL DETAILS -->
-  <section>
-    <div class="section-label">Execution Details</div>
-    <h2>The details that make or break your program</h2>
-
-    <div class="takeaways">
-      <div class="takeaway">
-        <h3>Warm-up strategy depends on your goal</h3>
-        <p><strong style="color: var(--text);">For strength/power:</strong> prioritize intensity preservation — do as many warm-up sets as needed until you hit peak performance, even if it takes 15 minutes. <strong style="color: var(--text);">For hypertrophy:</strong> prioritize volume preservation — keep warm-ups short so you have energy for more working sets.</p>
-      </div>
-      <div class="takeaway">
-        <h3>Breathing under heavy load</h3>
-        <p>Inhale through the abdomen (not shoulders) to create intra-abdominal pressure. For single heavy reps: hold breath for the entire lift. For higher reps: breathe at the top of each rep. Never hold your breath for more than one rep at near-max loads.</p>
-      </div>
-      <div class="takeaway">
-        <h3>Time under tension for hypertrophy (equipment-limited)</h3>
-        <p>When you don't have heavy weights (hotel, home gym), slow the rep cadence dramatically: 5-second eccentric, 2-second pause, 3-second concentric. You can stimulate the same hypertrophy with far less weight. Galpin goes as extreme as 10:10:10 with bodyweight movements.</p>
-      </div>
-      <div class="takeaway">
-        <h3>Training to failure: it depends</h3>
-        <p><strong style="color: var(--text);">For strength:</strong> not required, especially for beginners (0-5 years). Stop at technical failure. <strong style="color: var(--text);">For hypertrophy:</strong> more beneficial, especially for advanced lifters. But even beginners should occasionally take safe exercises to true failure to learn what their max actually feels like.</p>
-      </div>
-    </div>
+    <p>Galpin's key insight: most misconceptions about exercise (e.g., "momentum is always cheating," "you must always go slow and controlled") come from applying bodybuilding assumptions to non-bodybuilding goals. <strong style="color: var(--text);">There are excellent reasons to use momentum. There are reasons to go fast AND to go slow</strong> — it depends on which of the 9 adaptations you're training for.</p>
   </section>
 
   <div class="divider"></div>
@@ -629,29 +694,29 @@
 
     <div class="takeaways">
       <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(249, 115, 22, 0.15); color: var(--orange);">1</div>
-        <h3>Strength training is the only way to preserve your neuromuscular system</h3>
-        <p>No amount of cardio, yoga, or stretching replaces heavy resistance training for maintaining motor units, muscle power, and functional independence as you age.</p>
+        <div class="takeaway-number" style="background: rgba(99, 102, 241, 0.15); color: var(--accent);">1</div>
+        <h3>Fitness is 9 things, not one</h3>
+        <p>Skill, speed, power, strength, hypertrophy, muscular endurance, anaerobic capacity, VO2 max, and long-duration endurance are all distinct adaptations requiring specific training.</p>
       </div>
       <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(59, 130, 246, 0.15); color: var(--blue);">2</div>
-        <h3>Strength and hypertrophy are different adaptations</h3>
-        <p>Strength is neural (force production). Hypertrophy is structural (muscle size). The same exercise can train either — it's the reps, load, rest, and intent that determine the outcome.</p>
+        <div class="takeaway-number" style="background: rgba(45, 212, 191, 0.15); color: var(--teal);">2</div>
+        <h3>One silo is not enough</h3>
+        <p>The Swedish skiers and twin study prove it: even 50+ years of endurance training doesn't build strength. You need a combination to be truly healthy.</p>
       </div>
       <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(45, 212, 191, 0.15); color: var(--teal);">3</div>
-        <h3>Use the 3-to-5 rule for strength</h3>
-        <p>3-5 days, 3-5 exercises, 3-5 reps, 3-5 sets, 3-5 minutes rest. Simple, evidence-based, and easy to remember. Progress load by 3-5% per week.</p>
+        <div class="takeaway-number" style="background: rgba(249, 115, 22, 0.15); color: var(--orange);">3</div>
+        <h3>Consistency beats volume</h3>
+        <p>The 80-90 year old skiers weren't doing shocking amounts of training. It was 50 years of consistent, moderate effort that gave them college-level VO2 max scores.</p>
       </div>
       <div class="takeaway">
         <div class="takeaway-number" style="background: rgba(236, 72, 153, 0.15); color: var(--pink);">4</div>
-        <h3>It's never too late to start</h3>
-        <p>People over 90 showed 30-170% improvements in 12 weeks. Age-related muscle loss is primarily a training loss, not an inevitable biological decline.</p>
+        <h3>Fast-twitch fibers need deliberate work</h3>
+        <p>Aging selectively kills fast-twitch fibers. Only high-force or explosive training preserves them — and you need them to catch yourself from falls and maintain functional independence.</p>
       </div>
       <div class="takeaway">
         <div class="takeaway-number" style="background: rgba(34, 197, 94, 0.15); color: var(--green);">5</div>
-        <h3>Organize by movement patterns, not muscles</h3>
-        <p>Push, pull, hinge, squat. Keep the same exercises for 6-12 weeks. Balance across patterns to prevent injury and build functional, transferable strength.</p>
+        <h3>Test yourself with Galpin's benchmarks</h3>
+        <p>Resting heart rate under 60, 25+ push-ups, 40+ second dead hang, 60-second plank. Know your numbers, then train your weaknesses.</p>
       </div>
     </div>
   </section>
@@ -664,42 +729,35 @@
     <div style="text-align: left; max-width: 620px; margin: 0 auto 2rem;">
       <ul style="list-style: none; padding: 0;">
         <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
-          <a href="https://www.youtube.com/watch?v=CyDLbrZK75U&t=252s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--orange);"><strong>The full neuromuscular aging breakdown</strong></a> — why power declines 4x faster than muscle size, and how motor unit loss affects daily function
+          <a href="https://www.youtube.com/watch?v=zEYE-vcVKy8&t=679s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--accent);"><strong>Gold-standard lab tests vs. free alternatives</strong></a> — Galpin walks through both for every adaptation, so you can pick what fits your budget
         </li>
         <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
-          <a href="https://www.youtube.com/watch?v=CyDLbrZK75U&t=2109s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--orange);"><strong>Acetylcholine & the neuromuscular junction</strong></a> — the complete molecular mechanism of how nerves signal muscles to contract
+          <a href="https://www.youtube.com/watch?v=zEYE-vcVKy8&t=5182s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--accent);"><strong>Exact warm-up protocols</strong></a> for one-rep max testing (via NSCA guidelines) — getting this wrong skews all your results
         </li>
         <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
-          <a href="https://www.youtube.com/watch?v=CyDLbrZK75U&t=2790s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--orange);"><strong>mTOR vs AMPK pathways explained</strong></a> — the molecular switches for muscle building vs. endurance, and why combining them creates interference
+          <a href="https://www.youtube.com/watch?v=zEYE-vcVKy8&t=2316s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--accent);"><strong>The full history of exercise science</strong></a> — from the Harvard Fatigue Lab (1927) through the aerobics revolution, bodybuilding era, and CrossFit, and why each left blind spots in how people train today
         </li>
         <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
-          <a href="https://www.youtube.com/watch?v=CyDLbrZK75U&t=6972s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--orange);"><strong>The Prilepin Chart</strong></a> — the reference chart showing optimal set/rep distribution across intensity zones for strength
+          <a href="https://www.youtube.com/watch?v=zEYE-vcVKy8&t=2339s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--accent);"><strong>When to use momentum vs. slow controlled reps</strong></a> — Galpin dismantles the "momentum is cheating" myth with specific scenarios for each
         </li>
         <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
-          <a href="https://www.youtube.com/watch?v=CyDLbrZK75U&t=6372s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--orange);"><strong>Blood pressure & breathing mechanics</strong></a> — proper bracing strategy for heavy lifts and rep-by-rep breathing patterns
+          <a href="https://www.youtube.com/watch?v=zEYE-vcVKy8&t=3465s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--accent);"><strong>Women and resistance training</strong></a> — the NIH mandate, why female-specific exercise research barely exists, and what's changing
         </li>
         <li style="padding: 0.6rem 0; color: var(--text-muted);">
-          <a href="https://www.youtube.com/watch?v=CyDLbrZK75U&t=7020s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--orange);"><strong>The Bulgarian Method debate</strong></a> — extreme specificity (daily max attempts) vs. variation, and when each approach works
+          <a href="https://www.youtube.com/watch?v=zEYE-vcVKy8&t=5500s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--accent);"><strong>The muscular endurance hack story</strong></a> — how one study participant quadrupled his push-up score by exploiting an unstandardized test protocol
         </li>
       </ul>
     </div>
-    <a href="https://www.youtube.com/watch?v=CyDLbrZK75U" class="yt-link" target="_blank">
+    <a href="https://www.youtube.com/watch?v=zEYE-vcVKy8" class="yt-link" target="_blank">
       &#9654; Watch on YouTube
     </a>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- NAV -->
-  <section style="text-align: center; padding: 2rem 0;">
-    <a href="../episode-1-summary/index.html" class="nav-link">&larr; Episode 1: Assess Your Fitness</a>
   </section>
 
 </main>
 
 <footer class="footer">
   <p>Summary generated by Luo Ji &middot; Full transcript available at <a href="http://100.89.76.77:8888/browse/Users/luo/work/huberman-galpin-transcripts">file browser</a></p>
-  <p style="margin-top: 0.5rem;">Huberman Lab Guest Series with Dr. Andy Galpin &middot; Episode 2 of 6</p>
+  <p style="margin-top: 0.5rem;">Huberman Lab Guest Series with Dr. Andy Galpin &middot; Episode 1 of 6</p>
 </footer>
 
 </body>

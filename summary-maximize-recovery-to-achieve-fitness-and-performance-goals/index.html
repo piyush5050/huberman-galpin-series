@@ -3,43 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Episode 6: Optimal Nutrition & Supplementation for Fitness</title>
+<title>Episode 5: Maximize Recovery to Achieve Fitness & Performance Goals</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
   :root {
     --bg: #0a0a0f; --surface: #13131a; --surface-2: #1a1a24; --border: #2a2a3a;
     --text: #e8e8f0; --text-muted: #8888a0;
-    --accent: #22c55e; --accent-glow: rgba(34, 197, 94, 0.12);
+    --accent: #6366f1; --accent-glow: rgba(99, 102, 241, 0.12);
     --teal: #2dd4bf; --orange: #f97316; --pink: #ec4899; --green: #22c55e;
     --red: #ef4444; --yellow: #eab308; --blue: #3b82f6; --amber: #f59e0b; --purple: #a78bfa; --indigo: #6366f1;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; -webkit-font-smoothing: antialiased; }
   .hero { position: relative; min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(34, 197, 94, 0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 50%, rgba(249, 115, 22, 0.06) 0%, transparent 60%); }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 50%, rgba(45, 212, 191, 0.06) 0%, transparent 60%); }
   .hero-content { position: relative; max-width: 800px; }
-  .hero-badge { display: inline-block; padding: 0.4rem 1.2rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 2rem; }
-  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; background: linear-gradient(135deg, #fff 0%, #86efac 50%, #22c55e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hero-badge { display: inline-block; padding: 0.4rem 1.2rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--indigo); margin-bottom: 2rem; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; background: linear-gradient(135deg, #fff 0%, #a5b4fc 50%, #6366f1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .hero-subtitle { font-size: 1.2rem; color: var(--text-muted); max-width: 620px; margin: 0 auto 2rem; font-weight: 300; }
   .hero-meta { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-muted); }
   .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
   section { padding: 5rem 0; }
-  .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green); margin-bottom: 1rem; }
+  .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--indigo); margin-bottom: 1rem; }
   h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2; }
   h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; }
   p { color: var(--text-muted); margin-bottom: 1.2rem; font-size: 1.05rem; }
   .full-image { width: 100%; border-radius: 16px; margin: 2rem 0; border: 1px solid var(--border); }
   .takeaways { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin: 2rem 0; }
   .takeaway { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: border-color 0.3s, transform 0.2s; }
-  .takeaway:hover { border-color: var(--green); transform: translateY(-2px); }
+  .takeaway:hover { border-color: var(--indigo); transform: translateY(-2px); }
   .takeaway-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 8px; font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem; }
   .takeaway h3 { margin-bottom: 0.5rem; }
   .takeaway p { margin-bottom: 0; font-size: 0.95rem; }
-  .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 2rem 0; }
+  .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
   .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; text-align: center; }
-  .stat-number { font-size: 2rem; font-weight: 800; line-height: 1; margin-bottom: 0.3rem; }
+  .stat-number { font-size: 2.5rem; font-weight: 800; line-height: 1; margin-bottom: 0.3rem; }
   .stat-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
-  blockquote { border-left: 3px solid var(--green); padding: 1.5rem 2rem; margin: 2rem 0; background: var(--accent-glow); border-radius: 0 12px 12px 0; font-size: 1.1rem; font-style: italic; color: var(--text); }
+  blockquote { border-left: 3px solid var(--indigo); padding: 1.5rem 2rem; margin: 2rem 0; background: var(--accent-glow); border-radius: 0 12px 12px 0; font-size: 1.1rem; font-style: italic; color: var(--text); }
   blockquote cite { display: block; margin-top: 0.8rem; font-size: 0.85rem; font-style: normal; color: var(--text-muted); }
   .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 3rem 0; }
   .study-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin: 2rem 0; }
@@ -47,39 +47,41 @@
   .study-card-body { padding: 2rem; }
   .study-card-body h3 { margin-bottom: 0.8rem; }
 
-  .compare-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.9rem; }
-  .compare-table thead { background: var(--surface-2); }
-  .compare-table th { padding: 1rem; text-align: left; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); border-bottom: 1px solid var(--border); }
-  .compare-table td { padding: 1rem; border-bottom: 1px solid var(--border); color: var(--text-muted); }
-  .compare-table tr:hover td { background: var(--surface); }
-  .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
-  .badge-green { background: rgba(34, 197, 94, 0.15); color: var(--green); }
-  .badge-blue { background: rgba(59, 130, 246, 0.15); color: var(--blue); }
-  .badge-orange { background: rgba(249, 115, 22, 0.15); color: var(--orange); }
-  .badge-teal { background: rgba(45, 212, 191, 0.15); color: var(--teal); }
-  .badge-red { background: rgba(239, 68, 68, 0.15); color: var(--red); }
+  /* Level cards */
+  .level-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .level-card { border-radius: 16px; padding: 2rem; border: 1px solid; }
+  .level-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .level-card .level-recovery { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .level-card p { font-size: 0.9rem; margin: 0; }
 
-  .formula-box { background: var(--surface); border: 2px solid var(--green); border-radius: 16px; padding: 2rem; margin: 2rem 0; text-align: center; }
-  .formula-box .formula { font-size: 1.5rem; font-weight: 800; color: var(--text); margin-bottom: 0.5rem; font-family: 'Inter', monospace; }
-  .formula-box .formula-label { font-size: 0.9rem; color: var(--text-muted); }
+  /* Warning box */
+  .warning-box { background: linear-gradient(135deg, rgba(234, 179, 8, 0.08), rgba(234, 179, 8, 0.02)); border: 1px solid rgba(234, 179, 8, 0.25); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+  .warning-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--yellow); margin-bottom: 0.8rem; }
+
+  /* Protocol cards */
+  .protocol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .protocol-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+  .protocol-card .proto-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+  .protocol-card h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.3rem; }
+  .protocol-card p { font-size: 0.8rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
 
   .footer { text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.85rem; }
-  .footer a { color: var(--green); text-decoration: none; }
+  .footer a { color: var(--indigo); text-decoration: none; }
   .footer a:hover { text-decoration: underline; }
   .yt-link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.6rem; background: var(--red); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: opacity 0.2s; }
   .yt-link:hover { opacity: 0.9; text-decoration: none; }
   .nav-link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; border: 1px solid var(--border); color: var(--text-muted); text-decoration: none; border-radius: 8px; font-size: 0.85rem; transition: all 0.2s; margin: 0 0.3rem; }
-  .nav-link:hover { border-color: var(--green); color: var(--text); }
-  @media (max-width: 768px) { .stats-row { grid-template-columns: 1fr 1fr; } section { padding: 3rem 0; } }
+  .nav-link:hover { border-color: var(--indigo); color: var(--text); }
+  @media (max-width: 768px) { .level-grid, .protocol-grid { grid-template-columns: 1fr; } .stats-row { grid-template-columns: 1fr 1fr; } section { padding: 3rem 0; } }
 </style>
 </head>
 <body>
 
 <header class="hero">
   <div class="hero-content">
-    <div class="hero-badge">Episode 6 of 6 &middot; Guest Series</div>
-    <h1>Optimal Nutrition &amp; Supplementation for Fitness</h1>
-    <p class="hero-subtitle">The series finale. Galpin delivers the Galpin Equation for hydration, cuts through supplement noise with the 80/20 rule, and gives exact macronutrient numbers for training days.</p>
+    <div class="hero-badge">Episode 5 of 6 &middot; Guest Series</div>
+    <h1>Maximize Recovery to Achieve Fitness &amp; Performance Goals</h1>
+    <p class="hero-subtitle">The workout is the stimulus. Recovery is when adaptation actually happens. Galpin explains why most people aren't overtrained — they're under-recovered.</p>
     <div class="hero-meta">
       <span>Dr. Andrew Huberman &amp; Dr. Andy Galpin</span>
       <span>Huberman Lab Podcast</span>
@@ -89,248 +91,176 @@
 
 <main class="container">
 
-  <!-- 80/20 SUPPLEMENTS -->
+  <!-- THE BIG IDEA -->
   <section>
-    <div class="section-label">The Philosophy</div>
-    <h2>The 80/20 rule: most supplements are noise</h2>
+    <div class="section-label">The Big Idea</div>
+    <h2>You don't get fitter during the workout. You get fitter during recovery.</h2>
 
-    <img src="images/supplement-pillars.png" alt="Three supplement categories" class="full-image">
+    <img src="images/stress-recovery-adaptation.png" alt="Stress, recovery, and adaptation cycle" class="full-image">
 
-    <p>Galpin's approach: <strong style="color: var(--text);">only supplement what you specifically need</strong>, verified through testing when possible. The vast majority of benefits come from three categories:</p>
+    <p>Like neuroplasticity — where the stimulus triggers change but rewiring happens during sleep and rest — exercise creates the stress that <em>signals</em> the body to adapt. But <strong style="color: var(--text);">the actual building happens during recovery</strong>: muscle repair, neural rewiring, cardiovascular remodeling, mitochondrial biogenesis.</p>
 
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--teal); font-size: 1.5rem;">FUEL</div>
-        <div class="stat-label">Creatine — builds over weeks</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--orange); font-size: 1.5rem;">STIMULANTS</div>
-        <div class="stat-label">Caffeine — acute, 30-min onset</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--purple); font-size: 1.5rem;">FATIGUE BLOCKERS</div>
-        <div class="stat-label">Beta-alanine, sodium bicarbonate</div>
-      </div>
-    </div>
+    <p>The fundamental equation:</p>
 
     <blockquote>
-      "Supplements are not just supplementing deficient diets. They're potent compounds that can transform performance, recovery, and brain chemistry."
+      "Stress → recovery outpaces stress input → adaptation. If recovery doesn't exceed stress, you don't adapt. You move backwards."
       <cite>— Dr. Andy Galpin</cite>
     </blockquote>
   </section>
 
   <div class="divider"></div>
 
-  <!-- CREATINE -->
+  <!-- HORMESIS -->
   <section>
-    <div class="section-label">The #1 Supplement</div>
-    <h2>Creatine: the single best ROI in supplementation</h2>
+    <div class="section-label">The Principle</div>
+    <h2>Hormesis: exercise is a controlled poison</h2>
 
-    <p>Creatine isn't just for bodybuilders. It fuels the phosphocreatine energy system (instant power for 8-10 seconds), supports cognitive function, and helps with cell hydration. It's one of the most researched supplements in existence.</p>
+    <img src="images/hormesis-curve.png" alt="Hormesis dose-response curve" class="full-image">
 
-    <table class="compare-table">
-      <thead>
-        <tr>
-          <th>Parameter</th>
-          <th>Recommendation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong style="color: var(--text);">Daily dose</strong></td>
-          <td><span class="badge badge-green">3-7 grams/day</span> — no loading required</td>
-        </tr>
-        <tr>
-          <td><strong style="color: var(--text);">Optional loading</strong></td>
-          <td>20g/day split into 4 &times; 5g doses for faster saturation</td>
-        </tr>
-        <tr>
-          <td><strong style="color: var(--text);">Time to saturate</strong></td>
-          <td>3-4 weeks (chronic, not acute like caffeine)</td>
-        </tr>
-        <tr>
-          <td><strong style="color: var(--text);">Benefits</strong></td>
-          <td>Muscle size/strength, cognitive function, cell hydration, sleep deprivation mitigation</td>
-        </tr>
-        <tr>
-          <td><strong style="color: var(--text);">Best paired with</strong></td>
-          <td>Carbohydrates (insulin/glucose enhances absorption)</td>
-        </tr>
-        <tr>
-          <td><strong style="color: var(--text);">Side effects</strong></td>
-          <td>Potential GI distress at very high doses (30g+); otherwise well-tolerated</td>
-        </tr>
-      </tbody>
-    </table>
+    <p>Exercise is a <strong style="color: var(--text);">hormetic stressor</strong> — a small dose triggers beneficial adaptation, but too much becomes toxic. Every workout causes inflammation, oxidative stress, and micro-damage. In the right dose, your body overcompensates by rebuilding stronger. In excessive doses, the damage outpaces repair.</p>
+
+    <div class="warning-box">
+      <div class="warning-label">Critical Trade-off</div>
+      <h3 style="margin-bottom: 0.5rem;">Maximizing immediate recovery can block long-term adaptation</h3>
+      <p style="margin: 0;">Ice baths, anti-inflammatories (NSAIDs), and high-dose antioxidants (vitamin C & E) can all reduce soreness — but they may also blunt the inflammatory signals that trigger hypertrophy and strength gains. <strong style="color: var(--text);">Use acute recovery tools when competing soon. Avoid them during off-season building phases.</strong></p>
+    </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- HYDRATION -->
+  <!-- FOUR LEVELS -->
   <section>
-    <div class="section-label">The Galpin Equation</div>
-    <h2>Hydration: the most underrated performance variable</h2>
+    <div class="section-label">The Spectrum</div>
+    <h2>Four levels of training stress: most people aren't overtrained</h2>
 
-    <img src="images/galpin-equation.png" alt="The Galpin Equation for hydration" class="full-image">
+    <img src="images/four-levels-stress.png" alt="Four levels of training stress" class="full-image">
 
-    <p>Even <strong style="color: var(--text);">2% dehydration</strong> impairs accuracy, endurance, speed, power, and mental performance. At 3-5%, blood volume drops, viscosity increases, and endurance collapses. Most people train chronically under-hydrated.</p>
-
-    <div class="formula-box">
-      <div class="formula">Body weight (kg) &times; 2 &divide; 30 = ml every 15-20 min</div>
-      <div class="formula-label">The Galpin Equation &mdash; intra-workout hydration</div>
-    </div>
-
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--blue);">0.5 oz</div>
-        <div class="stat-label">Per lb body weight (daily baseline)</div>
+    <div class="level-grid">
+      <div class="level-card" style="background: rgba(34, 197, 94, 0.06); border-color: rgba(34, 197, 94, 0.3);">
+        <div class="level-recovery" style="color: var(--green);">Level 1 &middot; Recovery: hours to days</div>
+        <h4 style="color: var(--green);">Acute Overload</h4>
+        <p>Normal post-workout fatigue. This is the desired hormetic stimulus. You feel tired after a session — that's the plan.</p>
       </div>
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--teal);">~6-7 oz</div>
-        <div class="stat-label">Every 15-20 min during exercise</div>
+      <div class="level-card" style="background: rgba(234, 179, 8, 0.06); border-color: rgba(234, 179, 8, 0.3);">
+        <div class="level-recovery" style="color: var(--yellow);">Level 2 &middot; Recovery: days to 1 week</div>
+        <h4 style="color: var(--yellow);">Functional Overreaching &#9733;</h4>
+        <p><strong style="color: var(--text);">The golden target.</strong> Accumulated overloads lead to temporary performance drop, followed by super-compensation ABOVE your previous baseline. This is when tapering/deloading produces breakthroughs.</p>
       </div>
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--green);">125%</div>
-        <div class="stat-label">Of lost fluids post-exercise</div>
+      <div class="level-card" style="background: rgba(249, 115, 22, 0.06); border-color: rgba(249, 115, 22, 0.3);">
+        <div class="level-recovery" style="color: var(--orange);">Level 3 &middot; Recovery: weeks</div>
+        <h4 style="color: var(--orange);">Non-Functional Overreaching</h4>
+        <p>You pushed through functional overreaching without resting. Performance declines for weeks, returning only to baseline — no super-compensation. <strong style="color: var(--text);">Most people who think they're "overtrained" are actually here.</strong></p>
       </div>
-      <div class="stat-card">
-        <div class="stat-number" style="color: var(--orange);">16-30 oz</div>
-        <div class="stat-label">Upon waking (morning kickstart)</div>
+      <div class="level-card" style="background: rgba(239, 68, 68, 0.06); border-color: rgba(239, 68, 68, 0.3);">
+        <div class="level-recovery" style="color: var(--red);">Level 4 &middot; Recovery: months</div>
+        <h4 style="color: var(--red);">True Overtraining Syndrome</h4>
+        <p>Rare. Requires months to recover. A 3-4 day break fixes Level 3; if rest doesn't help, this is Level 4. Most recreational exercisers will never reach this.</p>
       </div>
     </div>
 
-    <p><strong style="color: var(--text);">Evening tip:</strong> sip water in the 3 hours before sleep — don't gulp large amounts. Large drinks dilute blood rapidly, triggering immediate urination and disrupting sleep.</p>
+    <p><strong style="color: var(--text);">The practical test:</strong> if your performance drops for 1-2 days, that's normal Level 1-2. If it drops for 5+ consecutive days, you've entered Level 3 territory and need to back off. In competition season, even 2+ days of decline warrants attention.</p>
   </section>
 
   <div class="divider"></div>
 
-  <!-- WUT SYSTEM -->
+  <!-- SORENESS -->
   <section>
-    <div class="section-label">Self-Assessment</div>
-    <h2>The WUT system: better than lab testing</h2>
+    <div class="section-label">The Science</div>
+    <h2>What muscle soreness actually is (it's not what you think)</h2>
 
-    <img src="images/wut-system.png" alt="WUT hydration diagnostic system" class="full-image">
-
-    <p>Three simple metrics that predict hydration status better than osmolality testing:</p>
+    <p>DOMS (Delayed Onset Muscle Soreness) isn't direct muscle fiber damage sending pain signals. The mechanism is more nuanced:</p>
 
     <div class="takeaways">
       <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(59, 130, 246, 0.15); color: var(--blue);">W</div>
-        <h3>Weight</h3>
-        <p>Weigh yourself before bed and upon waking. Normal overnight float = 1-2 lbs for a 170+ lb person. Larger drops suggest dehydration or excessive sweating.</p>
+        <div class="takeaway-number" style="background: rgba(99, 102, 241, 0.15); color: var(--indigo);">1</div>
+        <h3>Swelling creates pressure on nerve endings</h3>
+        <p>Exercise causes fluid accumulation in muscle tissue. This fluid puts pressure on muscle spindle nerve endings (gamma motor neurons), which send pain signals to the brain. The pain receptors (nociceptors) aren't in the muscle belly itself — they respond to pressure from swelling.</p>
       </div>
       <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(234, 179, 8, 0.15); color: var(--yellow);">U</div>
-        <h3>Urine</h3>
-        <p><strong style="color: var(--text);">Clear + small amounts</strong> = overhydrated. <strong style="color: var(--text);">Dark + large volumes</strong> = dehydrated. <strong style="color: var(--text);">Dark + small amounts</strong> = possible sleep apnea/vasopressin issue (not hydration). <strong style="color: var(--text);">Pale yellow + normal volume</strong> = ideal.</p>
+        <div class="takeaway-number" style="background: rgba(45, 212, 191, 0.15); color: var(--teal);">2</div>
+        <h3>Why rubbing sore muscles helps (gate theory)</h3>
+        <p>Touch and pressure activate mechanoreceptors that inhibit pain signals at the spinal cord level. This is why massage, compression, and light movement all reduce soreness — they activate competing nerve signals that "close the gate" on pain.</p>
       </div>
       <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(249, 115, 22, 0.15); color: var(--orange);">T</div>
-        <h3>Thirst</h3>
-        <p>If you're thirsty, you're already behind. Salt cravings are hardwired — craving salt likely means you're deficient. Athletes on clean diets + caffeine + training need 3-4x more sodium than the general population.</p>
+        <div class="takeaway-number" style="background: rgba(249, 115, 22, 0.15); color: var(--orange);">3</div>
+        <h3>Light movement is the best acute remedy</h3>
+        <p>Low-level movement pumps fluid out of the tissue, directly reducing the pressure on nerve endings. This is why walking, easy cycling, or gentle stretching the day after a hard session reduces soreness more effectively than rest.</p>
       </div>
     </div>
-
-    <p><strong style="color: var(--text);">Night urination rule:</strong> waking 1-2 times per night = acceptable. More than 2 = investigate. If you have dry mouth + large urinations, it's likely a <em>breathing</em> issue (mouth breathing during sleep), not dehydration.</p>
   </section>
 
   <div class="divider"></div>
 
-  <!-- ELECTROLYTES -->
+  <!-- RECOVERY TOOLS -->
   <section>
-    <div class="section-label">Electrolytes</div>
-    <h2>Sodium is probably your biggest gap</h2>
+    <div class="section-label">The Toolkit</div>
+    <h2>Post-workout recovery protocols</h2>
 
-    <p>If you eat clean (no processed foods), drink caffeine, and train regularly, you're almost certainly sodium-deficient. This trifecta depletes sodium stores that processed-food eaters replenish passively.</p>
+    <img src="images/recovery-tools.png" alt="Recovery tools and protocols" class="full-image">
+
+    <div class="protocol-grid">
+      <div class="protocol-card">
+        <div class="proto-icon">🫁</div>
+        <h4>Down-regulation breathing</h4>
+        <p><strong style="color: var(--text);">3-10 min post-workout.</strong> Lie down, eyes covered, quiet. Box breathing (inhale-hold-exhale-hold) or cyclic sighing (2 inhales + extended exhale). Duration per side calibrated to your CO2 tolerance: &lt;20s exhale = 2-3s sides; 20-45s = 4-6s; &gt;60s = 7-12s.</p>
+      </div>
+      <div class="protocol-card">
+        <div class="proto-icon">🧦</div>
+        <h4>Compression gear</h4>
+        <p><strong style="color: var(--text);">Wear immediately after training.</strong> Tight leggings, compression shirts, socks. Prevents fluid accumulation that causes soreness. Also effective during cross-country flights to prevent blood coagulation issues.</p>
+      </div>
+      <div class="protocol-card">
+        <div class="proto-icon">❄️</div>
+        <h4>Cold water immersion</h4>
+        <p><strong style="color: var(--text);">Two protocols:</strong> Moderately cold (40-50&deg;F) for 15+ minutes, OR very cold (&lt;40&deg;F) for ~5 minutes. Should be uncomfortably cold. <em>Trade-off:</em> may blunt hypertrophy — use for competitions, avoid during building phases.</p>
+      </div>
+      <div class="protocol-card">
+        <div class="proto-icon">🎵</div>
+        <h4>Music tempo shift</h4>
+        <p><strong style="color: var(--text);">Switch to slow music post-workout.</strong> Fast-paced music during training increases arousal and performance. Shifting to slow tempo helps initiate parasympathetic (recovery) state. Simple, free, immediate.</p>
+      </div>
+      <div class="protocol-card">
+        <div class="proto-icon">🚶</div>
+        <h4>Active recovery (light movement)</h4>
+        <p><strong style="color: var(--text);">Walk, easy cycling, gentle stretching.</strong> Pumps fluid out of swollen tissue, directly reducing pressure on nerve endings. Best single tool for acute soreness. Movement beats rest.</p>
+      </div>
+      <div class="protocol-card">
+        <div class="proto-icon">💆</div>
+        <h4>Massage &amp; pneumatic compression</h4>
+        <p><strong style="color: var(--text);">Compression boots, manual massage, foam rolling.</strong> All work via the same mechanism: moving fluid in/out of tissue, enhancing blood flow, clearing waste. Choose based on budget and access.</p>
+      </div>
+    </div>
+
+    <p><strong style="color: var(--text);">Research highlight:</strong> A study found that just 5 minutes of box breathing or cyclic sighing post-workout produces significant decreases in resting heart rate and increases in heart rate variability. Extended exhales are the key driver.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- MONITORING -->
+  <section>
+    <div class="section-label">Monitoring</div>
+    <h2>Three markers to watch — all must align</h2>
+
+    <p>Before concluding you're overreaching, check all three categories. Single-marker decisions lead to false alarms.</p>
 
     <div class="stats-row">
       <div class="stat-card">
-        <div class="stat-number" style="color: var(--amber);">200-400</div>
-        <div class="stat-label">mg sodium per intra-workout drink (standard)</div>
+        <div class="stat-number" style="color: var(--blue); font-size: 1.5rem;">PERFORMANCE</div>
+        <div class="stat-label">Times, weights, power output — are they declining?</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number" style="color: var(--teal);">2:1 to 3:1</div>
-        <div class="stat-label">Sodium:potassium ratio</div>
+        <div class="stat-number" style="color: var(--teal); font-size: 1.5rem;">PHYSIOLOGY</div>
+        <div class="stat-label">Resting HR, HRV, biomarkers — can't be faked by willpower</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number" style="color: var(--green);">1-5 lbs</div>
-        <div class="stat-label">Sweat loss per hour of exercise</div>
+        <div class="stat-number" style="color: var(--purple); font-size: 1.5rem;">SYMPTOMS</div>
+        <div class="stat-label">Subjective feelings — mood, energy, motivation, sleep quality</div>
       </div>
     </div>
 
-    <p><strong style="color: var(--text);">Coconut water hack:</strong> ~200mg sodium + ~600mg potassium. Add a pinch of salt to balance the sodium:potassium ratio. Cheap, natural, effective.</p>
-  </section>
+    <p>Biomarkers are the most reliable because they can't be manipulated by motivation. You can will yourself through a workout (masking a performance drop), but you can't fake your resting heart rate or HRV.</p>
 
-  <div class="divider"></div>
-
-  <!-- MACROS -->
-  <section>
-    <div class="section-label">Fueling Training</div>
-    <h2>Macronutrient numbers for training days</h2>
-
-    <img src="images/nutrition-timing.png" alt="Pre and post workout nutrition" class="full-image">
-
-    <p><strong style="color: var(--text);">Total daily intake matters more than timing</strong> — with one exception: carbohydrate timing becomes critical when sessions significantly deplete glycogen or when training multiple times per day.</p>
-
-    <table class="compare-table">
-      <thead>
-        <tr>
-          <th>Training Type</th>
-          <th>Carbs</th>
-          <th>Protein</th>
-          <th>Ratio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong style="color: var(--text);">High-effort</strong> (hypertrophy, endurance)</td>
-          <td><span class="badge badge-orange">0.5g/lb body weight</span></td>
-          <td><span class="badge badge-teal">0.25g/lb body weight</span></td>
-          <td>2:1 carb:protein</td>
-        </tr>
-        <tr>
-          <td><strong style="color: var(--text);">Lower-energy</strong> (easy sessions)</td>
-          <td><span class="badge badge-orange">50-75g</span></td>
-          <td><span class="badge badge-teal">50-75g</span></td>
-          <td>1:1 carb:protein</td>
-        </tr>
-        <tr>
-          <td><strong style="color: var(--text);">High-intensity + heat/fluid loss</strong></td>
-          <td><span class="badge badge-orange">150-200g</span></td>
-          <td><span class="badge badge-teal">40-50g</span></td>
-          <td>3:1 to 4:1 carb:protein</td>
-        </tr>
-        <tr>
-          <td><strong style="color: var(--text);">30-sec sprint / single bout</strong></td>
-          <td colspan="3">No special fueling needed</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p><strong style="color: var(--text);">The "anabolic window" myth:</strong> total daily protein intake matters far more than consuming protein within 30 minutes of training. However, carbohydrate timing IS important for glycogen resynthesis — especially when training twice per day.</p>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- CAFFEINE -->
-  <section>
-    <div class="section-label">Stimulants</div>
-    <h2>Caffeine: the most effective legal performance enhancer</h2>
-
-    <div class="takeaways">
-      <div class="takeaway">
-        <h3>Dosage: 1-3 mg per kg body weight</h3>
-        <p>For a 220 lb (100 kg) person = 100-300 mg. Onset in 30-45 minutes. Half-life of 4-6 hours (manage for sleep). <strong style="color: var(--text);">Above 5 mg/kg = performance decrements.</strong> Even habitual users show ergogenic benefit despite diminished subjective feeling.</p>
-      </div>
-      <div class="takeaway">
-        <h3>Best for endurance, mixed for strength</h3>
-        <p>Strong documented benefit for endurance activities, reaction time, and power output. Weaker/mixed effects on pure 1-rep max strength. Mechanism: competitively binds adenosine receptors, blocking fatigue signals.</p>
-      </div>
-      <div class="takeaway">
-        <h3>Coffee caffeine is wildly inconsistent</h3>
-        <p>A single cup of coffee contains 250-500 mg (varies by brew, roast, vendor). Standard lookup tables underestimate by 2-3x. <strong style="color: var(--text);">For precise dosing: use caffeine tablets (100-200 mg).</strong> For evening training without sleep disruption: try L-citrulline instead.</p>
-      </div>
-    </div>
+    <p><strong style="color: var(--text);">Timeline rule:</strong> 1 day of performance drop = normal. 2 days = still fine. 5+ consecutive days = investigate. During competition season, even 2+ days warrants a training adjustment.</p>
   </section>
 
   <div class="divider"></div>
@@ -338,37 +268,32 @@
   <!-- KEY TAKEAWAYS -->
   <section>
     <div class="section-label">Summary</div>
-    <h2>6 Things to Remember</h2>
+    <h2>5 Things to Remember</h2>
     <div class="takeaways">
       <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(34, 197, 94, 0.15); color: var(--green);">1</div>
-        <h3>Hydration is the most underrated performance lever</h3>
-        <p>2% dehydration degrades everything. Use the Galpin Equation during training (body weight kg &times; 2 &divide; 30 = ml every 15-20 min). Drink 125% of lost fluids after.</p>
+        <div class="takeaway-number" style="background: rgba(99, 102, 241, 0.15); color: var(--indigo);">1</div>
+        <h3>Adaptation happens during recovery, not during training</h3>
+        <p>The workout breaks things down. Sleep, rest, nutrition, and time build them back stronger. If recovery doesn't outpace stress, you move backwards.</p>
       </div>
       <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(45, 212, 191, 0.15); color: var(--teal);">2</div>
-        <h3>Creatine is the single best supplement investment</h3>
-        <p>3-7g/day. No loading needed. Benefits muscle, brain, and cell hydration. Takes 3-4 weeks to saturate — it's a chronic tool, not an acute one. Pair with carbs.</p>
+        <div class="takeaway-number" style="background: rgba(234, 179, 8, 0.15); color: var(--yellow);">2</div>
+        <h3>Functional overreaching is the goal — then taper</h3>
+        <p>Accumulate stress intentionally, then deload. The super-compensation that follows is when performance breakthroughs happen. You should NOT feel great every session during an overreach phase.</p>
       </div>
       <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(249, 115, 22, 0.15); color: var(--orange);">3</div>
-        <h3>You're probably sodium-deficient</h3>
-        <p>Clean diet + caffeine + training = sodium depletion. Salt cravings are real signals. Add 200-400mg sodium to workout drinks. Athletes need 3-4x more than sedentary people.</p>
+        <div class="takeaway-number" style="background: rgba(239, 68, 68, 0.15); color: var(--red);">3</div>
+        <h3>Recovery tools can block adaptation</h3>
+        <p>Ice baths, NSAIDs, and antioxidant mega-doses reduce soreness but may blunt hypertrophy signals. Use them strategically near competitions — avoid during building phases.</p>
       </div>
       <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(59, 130, 246, 0.15); color: var(--blue);">4</div>
-        <h3>Total daily macros > timing (with one exception)</h3>
-        <p>The anabolic window for protein is largely a myth. But carb timing matters for glycogen resynthesis, especially when training twice per day. High-effort days: 0.5g carbs + 0.25g protein per lb body weight.</p>
+        <div class="takeaway-number" style="background: rgba(45, 212, 191, 0.15); color: var(--teal);">4</div>
+        <h3>Breathing is the most underrated recovery tool</h3>
+        <p>5 minutes of structured breathing (box breathing or cyclic sighing) post-workout measurably improves HRV and resting heart rate. It's free, immediate, and backed by research.</p>
       </div>
       <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(234, 179, 8, 0.15); color: var(--yellow);">5</div>
-        <h3>Use WUT, not lab tests, for hydration</h3>
-        <p>Weight (overnight float), Urine (color + volume), Thirst. These three metrics predict hydration better than osmolality testing. Dark urine + small volume = possible sleep issue, not dehydration.</p>
-      </div>
-      <div class="takeaway">
-        <div class="takeaway-number" style="background: rgba(236, 72, 153, 0.15); color: var(--pink);">6</div>
-        <h3>Caffeine: 1-3 mg/kg, not more</h3>
-        <p>Above 5 mg/kg = performance drops. Coffee caffeine is wildly inconsistent (250-500mg per cup). Use tablets for precision. Even regular users still get ergogenic benefit.</p>
+        <div class="takeaway-number" style="background: rgba(34, 197, 94, 0.15); color: var(--green);">5</div>
+        <h3>You're probably not overtrained — you're under-recovered</h3>
+        <p>True overtraining syndrome is rare. Most people are at Level 3 (non-functional overreaching) and need 3-4 days off, not months. Check performance, physiology, AND symptoms before making a diagnosis.</p>
       </div>
     </div>
   </section>
@@ -381,26 +306,26 @@
     <div style="text-align: left; max-width: 620px; margin: 0 auto 2rem;">
       <ul style="list-style: none; padding: 0;">
         <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
-          <a href="https://www.youtube.com/watch?v=q37ARYnRDGc&t=519s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--green);"><strong>Complete creatine deep dive</strong></a> — loading protocols, cognitive benefits, cell hydration mechanics, and why it's the highest-ROI supplement
+          <a href="https://www.youtube.com/watch?v=juD99_sPWGU&t=240s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--indigo);"><strong>The full soreness mechanism</strong></a> — muscle spindles, gamma motor neurons, gate theory of pain, and why DOMS is a neural response, not muscle damage
         </li>
         <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
-          <a href="https://www.youtube.com/watch?v=q37ARYnRDGc&t=1254s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--green);"><strong>The Galpin Equation & hydration science</strong></a> — complete formula derivation, sweat rate data, dehydration performance effects, and NFL case studies
+          <a href="https://www.youtube.com/watch?v=juD99_sPWGU&t=960s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--indigo);"><strong>Free radicals & inflammation cascades</strong></a> — how mitochondrial electron transport chain produces reactive oxygen species and triggers neutrophil/macrophage repair
         </li>
         <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
-          <a href="https://www.youtube.com/watch?v=q37ARYnRDGc&t=1920s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--green);"><strong>Night urination diagnostics</strong></a> — how to distinguish dehydration from sleep apnea from mouth breathing, using urine color + volume patterns
+          <a href="https://www.youtube.com/watch?v=juD99_sPWGU&t=2013s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--indigo);"><strong>Acute vs long-term recovery trade-offs</strong></a> — when to use ice/anti-inflammatories (competition) vs when to avoid them (building phases), with vitamin C & E data
         </li>
         <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
-          <a href="https://www.youtube.com/watch?v=q37ARYnRDGc&t=3600s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--green);"><strong>Electrolyte deep dive & sodium deficiency</strong></a> — why clean-eating athletes need 3-4x more sodium, coconut water hack, and osmolality matching
+          <a href="https://www.youtube.com/watch?v=juD99_sPWGU&t=3269s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--indigo);"><strong>Box breathing & CO2 tolerance calibration</strong></a> — the full protocol for post-workout down-regulation, personalized to your CO2 exhale test results
         </li>
         <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
-          <a href="https://www.youtube.com/watch?v=q37ARYnRDGc&t=4724s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--green);"><strong>Macronutrient timing protocols</strong></a> — exact carb/protein ratios for different training types, the anabolic window myth, and glycogen resynthesis windows
+          <a href="https://www.youtube.com/watch?v=juD99_sPWGU&t=3900s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--indigo);"><strong>Cold water immersion protocols</strong></a> — exact temperatures, durations, and the adaptation-blunting trade-off with detailed recommendations
         </li>
         <li style="padding: 0.6rem 0; color: var(--text-muted);">
-          <a href="https://www.youtube.com/watch?v=q37ARYnRDGc&t=5100s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--green);"><strong>Caffeine dosing science</strong></a> — the 1-3 mg/kg sweet spot, why coffee caffeine varies 2-3x from lookup tables, adenosine receptor mechanics, and L-citrulline as evening alternative
+          <a href="https://www.youtube.com/watch?v=juD99_sPWGU&t=5100s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--indigo);"><strong>The three-marker monitoring system</strong></a> — how to track performance, physiology, and symptoms to distinguish functional from non-functional overreaching
         </li>
       </ul>
     </div>
-    <a href="https://www.youtube.com/watch?v=q37ARYnRDGc" class="yt-link" target="_blank">
+    <a href="https://www.youtube.com/watch?v=juD99_sPWGU" class="yt-link" target="_blank">
       &#9654; Watch on YouTube
     </a>
   </section>
@@ -412,14 +337,13 @@
     <a href="../episode-2-summary/index.html" class="nav-link">&larr; Ep 2</a>
     <a href="../episode-3-summary/index.html" class="nav-link">&larr; Ep 3</a>
     <a href="../episode-4-summary/index.html" class="nav-link">&larr; Ep 4</a>
-    <a href="../episode-5-summary/index.html" class="nav-link">&larr; Ep 5</a>
   </section>
 
 </main>
 
 <footer class="footer">
   <p>Summary generated by Luo Ji &middot; Full transcript available at <a href="http://100.89.76.77:8888/browse/Users/luo/work/huberman-galpin-transcripts">file browser</a></p>
-  <p style="margin-top: 0.5rem;">Huberman Lab Guest Series with Dr. Andy Galpin &middot; Episode 6 of 6</p>
+  <p style="margin-top: 0.5rem;">Huberman Lab Guest Series with Dr. Andy Galpin &middot; Episode 5 of 6</p>
 </footer>
 
 </body>
