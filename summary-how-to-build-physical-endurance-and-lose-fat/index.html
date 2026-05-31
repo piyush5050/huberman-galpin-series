@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Episode 4: Optimize Your Training Program for Fitness & Longevity</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+  :root {
+    --bg: #0a0a0f; --surface: #13131a; --surface-2: #1a1a24; --border: #2a2a3a;
+    --text: #e8e8f0; --text-muted: #8888a0;
+    --accent: #a78bfa; --accent-glow: rgba(167, 139, 250, 0.12);
+    --teal: #2dd4bf; --orange: #f97316; --pink: #ec4899; --green: #22c55e;
+    --red: #ef4444; --yellow: #eab308; --blue: #3b82f6; --amber: #f59e0b; --purple: #a78bfa;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+  .hero { position: relative; min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(167, 139, 250, 0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 50%, rgba(249, 115, 22, 0.06) 0%, transparent 60%); }
+  .hero-content { position: relative; max-width: 800px; }
+  .hero-badge { display: inline-block; padding: 0.4rem 1.2rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple); margin-bottom: 2rem; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; background: linear-gradient(135deg, #fff 0%, #c4b5fd 50%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hero-subtitle { font-size: 1.2rem; color: var(--text-muted); max-width: 620px; margin: 0 auto 2rem; font-weight: 300; }
+  .hero-meta { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-muted); }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+  section { padding: 5rem 0; }
+  .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--purple); margin-bottom: 1rem; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2; }
+  h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; }
+  p { color: var(--text-muted); margin-bottom: 1.2rem; font-size: 1.05rem; }
+  .full-image { width: 100%; border-radius: 16px; margin: 2rem 0; border: 1px solid var(--border); }
+
+  .takeaways { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin: 2rem 0; }
+  .takeaway { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: border-color 0.3s, transform 0.2s; }
+  .takeaway:hover { border-color: var(--purple); transform: translateY(-2px); }
+  .takeaway-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 8px; font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem; }
+  .takeaway h3 { margin-bottom: 0.5rem; }
+  .takeaway p { margin-bottom: 0; font-size: 0.95rem; }
+
+  .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; text-align: center; }
+  .stat-number { font-size: 2.5rem; font-weight: 800; line-height: 1; margin-bottom: 0.3rem; }
+  .stat-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+
+  blockquote { border-left: 3px solid var(--purple); padding: 1.5rem 2rem; margin: 2rem 0; background: var(--accent-glow); border-radius: 0 12px 12px 0; font-size: 1.1rem; font-style: italic; color: var(--text); }
+  blockquote cite { display: block; margin-top: 0.8rem; font-size: 0.85rem; font-style: normal; color: var(--text-muted); }
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 3rem 0; }
+
+  .study-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin: 2rem 0; }
+  .study-card img { width: 100%; display: block; }
+  .study-card-body { padding: 2rem; }
+  .study-card-body h3 { margin-bottom: 0.8rem; }
+
+  /* Step cards */
+  .step-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .step-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; transition: all 0.3s; }
+  .step-card:hover { border-color: var(--purple); }
+  .step-num { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .step-card h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.3rem; }
+  .step-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
+
+  /* Quadrant */
+  .quadrant-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .quad-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; text-align: center; }
+  .quad-card .quad-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .quad-card .quad-pts { font-size: 2rem; font-weight: 800; }
+  .quad-card .quad-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem; }
+
+  /* Compatibility */
+  .compat-row { display: flex; align-items: center; gap: 0.3rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0; }
+  .compat-node { padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.75rem; font-weight: 600; text-align: center; }
+  .compat-arrow { color: var(--text-muted); font-size: 1.2rem; }
+
+  .footer { text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.85rem; }
+  .footer a { color: var(--purple); text-decoration: none; }
+  .footer a:hover { text-decoration: underline; }
+  .yt-link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.6rem; background: var(--red); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: opacity 0.2s; }
+  .yt-link:hover { opacity: 0.9; text-decoration: none; }
+  .nav-link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; border: 1px solid var(--border); color: var(--text-muted); text-decoration: none; border-radius: 8px; font-size: 0.85rem; transition: all 0.2s; margin: 0 0.3rem; }
+  .nav-link:hover { border-color: var(--purple); color: var(--text); }
+
+  @media (max-width: 768px) { .step-grid, .quadrant-grid { grid-template-columns: 1fr; } .stats-row { grid-template-columns: 1fr 1fr; } section { padding: 3rem 0; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Episode 4 of 6 &middot; Guest Series</div>
+    <h1>Optimize Your Training Program for Fitness &amp; Longevity</h1>
+    <p class="hero-subtitle">This is the planning episode. Galpin delivers a complete 6-step framework for designing a training program that fits your actual life — not an ideal version of it.</p>
+    <div class="hero-meta">
+      <span>Dr. Andrew Huberman &amp; Dr. Andy Galpin</span>
+      <span>Huberman Lab Podcast</span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- THE BIG IDEA -->
+  <section>
+    <div class="section-label">The Big Idea</div>
+    <h2>A plan you follow beats a perfect plan you don't</h2>
+    <p>Episodes 1-3 covered <em>what</em> to train and <em>how</em>. This episode answers the harder question: <strong style="color: var(--text);">how do you combine everything into a program that actually works inside your real life?</strong></p>
+    <p>Galpin identifies the two reasons people fail to get results despite training:</p>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-number" style="color: var(--red); font-size: 1.5rem;">ADHERENCE</div>
+        <div class="stat-label">You don't show up consistently</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="color: var(--orange); font-size: 1.5rem;">OVERLOAD</div>
+        <div class="stat-label">You don't progressively challenge yourself</div>
+      </div>
+    </div>
+
+    <p>A specific, written plan solves both: structure drives consistency, and tracking drives progressive overload. The rest is details.</p>
+
+    <blockquote>
+      "Having a specific plan produces better results than not having one. Even a mediocre plan, followed consistently, beats a perfect plan you abandon."
+      <cite>— Dr. Andy Galpin</cite>
+    </blockquote>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 6 STEPS -->
+  <section>
+    <div class="section-label">The Framework</div>
+    <h2>Galpin's 6-step program design system</h2>
+
+    <img src="images/program-design-steps.png" alt="6-step program design flowchart" class="full-image">
+
+    <div class="step-grid">
+      <div class="step-card">
+        <div class="step-num" style="color: var(--teal);">Step 1</div>
+        <h4>Assess &amp; Set Goals</h4>
+        <p>Run fitness tests from Episode 1. Your lowest score = your "performance anchor." Use SMART framework: specific, measurable, attainable, realistic, timely. Optimal difficulty = 5% beyond current baseline.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="color: var(--orange);">Step 2</div>
+        <h4>Identify Your Defenders</h4>
+        <p>What specifically stops you? Injury, travel, family, inconsistency, knowledge gaps? Design the program around fixing this first. Allocate life into 4 quadrants (see below).</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="color: var(--blue);">Step 3</div>
+        <h4>Map Your Calendar</h4>
+        <p>Plot holidays, deadlines, travel, family events for the full training period. Build backwards around constraints, not against them. Life will always win — plan for it.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="color: var(--purple);">Step 4</div>
+        <h4>Set Frequency &amp; Duration</h4>
+        <p>How many days can you realistically train? Include travel, warm-up, shower (~2.5x workout time). Better to commit to 3 days reliably than 4 days with missed sessions.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="color: var(--green);">Step 5</div>
+        <h4>Select Exercises</h4>
+        <p>Choose movements you can execute safely and have access to. Balance across movement patterns. At least 1x/week targeting each priority area.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="color: var(--amber);">Step 6</div>
+        <h4>Order by Priority</h4>
+        <p>Do what matters most first — both within each session and across the week. Put hardest training on your highest-energy day. Low-friction workouts on tough days.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- QUADRANT SYSTEM -->
+  <section>
+    <div class="section-label">Life Design</div>
+    <h2>The 10-point quadrant: where does fitness actually fit?</h2>
+
+    <img src="images/quadrant-system.png" alt="Life allocation quadrant system" class="full-image">
+
+    <p>Before touching a workout plan, Galpin forces you to be honest about your life allocation. You have <strong style="color: var(--text);">10 points to distribute across four buckets</strong> — and they must add up to exactly 10.</p>
+
+    <div class="quadrant-grid">
+      <div class="quad-card">
+        <div class="quad-icon">💼</div>
+        <div class="quad-pts" style="color: var(--amber);">5</div>
+        <div class="quad-label">Work / Business (typical)</div>
+      </div>
+      <div class="quad-card">
+        <div class="quad-icon">❤️</div>
+        <div class="quad-pts" style="color: var(--pink);">2</div>
+        <div class="quad-label">Relationships</div>
+      </div>
+      <div class="quad-card">
+        <div class="quad-icon">🏋️</div>
+        <div class="quad-pts" style="color: var(--teal);">2</div>
+        <div class="quad-label">Fitness</div>
+      </div>
+      <div class="quad-card">
+        <div class="quad-icon">🌙</div>
+        <div class="quad-pts" style="color: var(--purple);">1</div>
+        <div class="quad-label">Recovery (minimum 20%)</div>
+      </div>
+    </div>
+
+    <p><strong style="color: var(--text);">Recovery has a hard floor: minimum 20% of total.</strong> If fitness gets 2 points, recovery must get at least 1. Sleep, downtime, social restoration — skip this and the other three quadrants collapse.</p>
+
+    <p>After setting your quadrant, use the <strong style="color: var(--text);">"Drop Everything And ___" rule</strong>: pick 1-2 non-negotiable commitments. Examples: "Drop Everything And Train at 3pm" (D3AT), "No work after 7pm Thursday-Sunday." Print it. Put it on your phone background. Share it with someone who'll hold you accountable.</p>
+
+    <blockquote>
+      "Hard rules give you freedom. Non-negotiable commitments remove decision paralysis — they provide organizing force for the brain."
+      <cite>— Dr. Andy Galpin</cite>
+    </blockquote>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- GOAL SETTING -->
+  <section>
+    <div class="section-label">Goal Science</div>
+    <h2>The psychology of goals that actually stick</h2>
+
+    <div class="takeaways">
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(167, 139, 250, 0.15); color: var(--purple);">5%</div>
+        <h3>Optimal goal difficulty: 5% beyond baseline</h3>
+        <p>A deception study found that goals set at 5% beyond current ability produced the highest adherence. Too easy = quit from boredom. Too hard = quit from discouragement. <strong style="color: var(--text);">Aim for "slightly scary but achievable."</strong></p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(45, 212, 191, 0.15); color: var(--teal);">Q</div>
+        <h3>Break annual goals into quarterly checkpoints</h3>
+        <p>Example: 2% body fat loss/year → 0.5% per quarter. But front-load preparation: Q1 = movement quality and injury prevention (0% loss), Q2-Q3 = 0.5% each, Q4 = 1% (max effort after building capacity). Dopamine responds to "on track" signals — quarterly wins sustain motivation.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(249, 115, 22, 0.15); color: var(--orange);">-10%</div>
+        <h3>Set your timeline at 90% of what feels realistic</h3>
+        <p>People overestimate what they can do. Subtract 10% from your "realistic" goal. If you think you can lose 10 lbs, plan for 9. You'll either hit it (dopamine boost) or get close (still progress). Overshooting destroys motivation.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- INTERFERENCE -->
+  <section>
+    <div class="section-label">Combining Adaptations</div>
+    <h2>What you can train together — and what fights</h2>
+
+    <img src="images/interference-spectrum.png" alt="Adaptation compatibility spectrum" class="full-image">
+
+    <p>The nine adaptations aren't equally compatible. <strong style="color: var(--text);">Proximity on the spectrum = compatibility.</strong> The further apart two adaptations are, the more they interfere with each other.</p>
+
+    <div class="compat-row">
+      <span class="compat-node" style="background: rgba(59, 130, 246, 0.2); color: var(--blue);">Speed</span>
+      <span class="compat-arrow">&harr;</span>
+      <span class="compat-node" style="background: rgba(167, 139, 250, 0.2); color: var(--purple);">Power</span>
+      <span class="compat-arrow">&harr;</span>
+      <span class="compat-node" style="background: rgba(249, 115, 22, 0.2); color: var(--orange);">Strength</span>
+      <span class="compat-arrow">&harr;</span>
+      <span class="compat-node" style="background: rgba(236, 72, 153, 0.2); color: var(--pink);">Hypertrophy</span>
+      <span class="compat-arrow">&harr;</span>
+      <span class="compat-node" style="background: rgba(239, 68, 68, 0.2); color: var(--red);">Anaerobic</span>
+      <span class="compat-arrow">&harr;</span>
+      <span class="compat-node" style="background: rgba(45, 212, 191, 0.2); color: var(--teal);">VO2 Max</span>
+      <span class="compat-arrow">&harr;</span>
+      <span class="compat-node" style="background: rgba(34, 197, 94, 0.2); color: var(--green);">Long Duration</span>
+    </div>
+
+    <div class="takeaways">
+      <div class="takeaway">
+        <h3 style="color: var(--green);">High compatibility: Speed + Power + Strength</h3>
+        <p>These three can be trained in the same session with zero interference. Speed improves acceleration which aids force production. Power is literally speed &times; force.</p>
+      </div>
+      <div class="takeaway">
+        <h3 style="color: var(--yellow);">Moderate: Strength + Hypertrophy</h3>
+        <p>Complementary in early phases. But to maximize one, you must eventually sacrifice volume or intensity in the other. Can't optimize both simultaneously at advanced levels.</p>
+      </div>
+      <div class="takeaway">
+        <h3 style="color: var(--red);">High interference: Endurance vs. Speed/Power/Strength</h3>
+        <p>High-volume endurance (&gt;30 min, &gt;60% max HR) creates fatigue that compromises explosive work. <strong style="color: var(--text);">Workarounds:</strong> reduce endurance volume, choose low-impact modalities (cycling &gt; running), increase calories, prioritize recovery.</p>
+      </div>
+      <div class="takeaway">
+        <h3 style="color: var(--teal);">Fat loss: no interference</h3>
+        <p>Fat loss is compatible with everything. Fatigue from any adaptation doesn't hurt fat loss — all training contributes to total carbon output. Multiple modalities work synergistically.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 7-STEP PROGRESSION -->
+  <section>
+    <div class="section-label">Safety System</div>
+    <h2>The 7-step exercise progression: earn the right to push hard</h2>
+
+    <img src="images/seven-step-progression.png" alt="7-step exercise progression framework" class="full-image">
+
+    <p>Before loading any exercise heavy or taking it to failure, you must pass through these gates in order:</p>
+
+    <div class="step-grid">
+      <div class="step-card">
+        <div class="step-num" style="color: var(--blue);">Step 1</div>
+        <h4>Assisted</h4>
+        <p>Can you do the movement with support? (Hands on bench for squat, band-assisted pull-up)</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="color: var(--teal);">Step 2</div>
+        <h4>Bodyweight</h4>
+        <p>Can you do it unassisted with no external load?</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="color: var(--green);">Step 3</div>
+        <h4>Eccentric load</h4>
+        <p>Can you lower weight under control? (This is the injury-prevention gate)</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="color: var(--yellow);">Step 4</div>
+        <h4>Isometric hold</h4>
+        <p>Can you pause and hold at the hardest position?</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="color: var(--orange);">Step 5</div>
+        <h4>Full range of motion</h4>
+        <p>Can you complete the full concentric + eccentric with load?</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="color: var(--red);">Step 6</div>
+        <h4>Increased speed</h4>
+        <p>Can you execute with velocity while maintaining form?</p>
+      </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 1rem;"><strong style="color: var(--text); font-size: 1.1rem;">Step 7: To fatigue</strong> — only after mastering all six steps above. This framework <em>dramatically</em> reduces both acute injury and chronic joint pain.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- THREE BINS -->
+  <section>
+    <div class="section-label">Which Bin Are You?</div>
+    <h2>Three goal categories — find yours</h2>
+
+    <div class="takeaways">
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(236, 72, 153, 0.15); color: var(--pink);">A</div>
+        <h3>Aesthetics + Longevity (~50% of people)</h3>
+        <p>Lose fat, build muscle in specific areas, maintain strength and endurance. Long-term health is the priority. You want to look good, feel good, and live long. Most people are here — and that's the right place to be.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(249, 115, 22, 0.15); color: var(--orange);">B</div>
+        <h3>Strength &amp; Muscle Gain (~20-30%)</h3>
+        <p>Primary goal: get bigger and stronger. Health matters but isn't the main driver. Must ensure training doesn't damage health markers (blood pressure, joint integrity, cardiovascular fitness).</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(45, 212, 191, 0.15); color: var(--teal);">C</div>
+        <h3>Endurance &amp; Skill Activities (~20-30%)</h3>
+        <p>Running, cycling, swimming, hiking, surfing, tennis, golf. Want to feel strong and vigorous doing these activities for years to come. Skill improvement and sustained energy are the goals.</p>
+      </div>
+    </div>
+
+    <p>Your bin determines how you balance the nine adaptations. Bin A spreads effort broadly. Bin B emphasizes strength/hypertrophy with maintenance cardio. Bin C prioritizes endurance with maintenance strength work.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- KEY TAKEAWAYS -->
+  <section>
+    <div class="section-label">Summary</div>
+    <h2>5 Things to Remember</h2>
+
+    <div class="takeaways">
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(167, 139, 250, 0.15); color: var(--purple);">1</div>
+        <h3>Design around your constraints, not against them</h3>
+        <p>Map your calendar, identify your "defenders," and build training into the gaps. A 3-day program you actually do beats a 5-day program you abandon by week 3.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(249, 115, 22, 0.15); color: var(--orange);">2</div>
+        <h3>Recovery has a hard floor: 20%</h3>
+        <p>The quadrant system forces honest allocation. Recovery isn't luxury — it's the foundation the other three quadrants rest on. Cut it and everything degrades.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(45, 212, 191, 0.15); color: var(--teal);">3</div>
+        <h3>Adjacent adaptations are compatible; distant ones interfere</h3>
+        <p>Speed + power + strength train beautifully together. High-volume endurance fights speed and power. Fat loss is compatible with everything.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(34, 197, 94, 0.15); color: var(--green);">4</div>
+        <h3>Earn the right to push hard (7-step progression)</h3>
+        <p>Assisted → bodyweight → eccentric → isometric → full ROM → speed → fatigue. Skip steps and you'll pay with injury.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(236, 72, 153, 0.15); color: var(--pink);">5</div>
+        <h3>Do what matters most first</h3>
+        <p>Priority exercises first in the session. Priority sessions on your highest-energy day. Low-friction work on tough days. Order determines outcomes.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- WATCH -->
+  <section style="text-align: center; padding: 4rem 0;">
+    <h2>Watch the Full Episode</h2>
+    <div style="text-align: left; max-width: 620px; margin: 0 auto 2rem;">
+      <ul style="list-style: none; padding: 0;">
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
+          <a href="https://www.youtube.com/watch?v=UIy-WQCZd4M&t=825s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--purple);"><strong>SMART goal framework in full</strong></a> — the complete breakdown of setting specific, measurable, attainable goals with the 5% difficulty sweet spot
+        </li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
+          <a href="https://www.youtube.com/watch?v=UIy-WQCZd4M&t=1492s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--purple);"><strong>The 10-point quadrant exercise</strong></a> — how to honestly allocate your life across work, relationships, fitness, and recovery
+        </li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
+          <a href="https://www.youtube.com/watch?v=UIy-WQCZd4M&t=1749s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--purple);"><strong>Interference effects deep dive</strong></a> — which adaptations fight each other, which are synergistic, and specific workarounds for combining endurance with strength
+        </li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
+          <a href="https://www.youtube.com/watch?v=UIy-WQCZd4M&t=3256s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--purple);"><strong>"Drop Everything And ___" implementation</strong></a> — how to turn vague intentions into hard commitments with accountability structures
+        </li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
+          <a href="https://www.youtube.com/watch?v=UIy-WQCZd4M&t=4443s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--purple);"><strong>The 7-step exercise progression</strong></a> — the complete safety framework from assisted movement to training to fatigue
+        </li>
+        <li style="padding: 0.6rem 0; color: var(--text-muted);">
+          <a href="https://www.youtube.com/watch?v=UIy-WQCZd4M&t=4833s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--purple);"><strong>High-friction vs. low-friction day scheduling</strong></a> — how to match workout difficulty to your energy levels across the week
+        </li>
+      </ul>
+    </div>
+    <a href="https://www.youtube.com/watch?v=UIy-WQCZd4M" class="yt-link" target="_blank">
+      &#9654; Watch on YouTube
+    </a>
+  </section>
+
+  <div class="divider"></div>
+
+  <section style="text-align: center; padding: 2rem 0;">
+    <a href="../episode-1-summary/index.html" class="nav-link">&larr; Ep 1</a>
+    <a href="../episode-2-summary/index.html" class="nav-link">&larr; Ep 2</a>
+    <a href="../episode-3-summary/index.html" class="nav-link">&larr; Ep 3</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Summary generated by Luo Ji &middot; Full transcript available at <a href="http://100.89.76.77:8888/browse/Users/luo/work/huberman-galpin-transcripts">file browser</a></p>
+  <p style="margin-top: 0.5rem;">Huberman Lab Guest Series with Dr. Andy Galpin &middot; Episode 4 of 6</p>
+</footer>
+
+</body>
+</html>

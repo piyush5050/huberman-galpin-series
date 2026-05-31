@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Episode 3: How to Build Physical Endurance & Lose Fat</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+  :root {
+    --bg: #0a0a0f;
+    --surface: #13131a;
+    --surface-2: #1a1a24;
+    --border: #2a2a3a;
+    --text: #e8e8f0;
+    --text-muted: #8888a0;
+    --accent: #2dd4bf;
+    --accent-glow: rgba(45, 212, 191, 0.12);
+    --teal: #2dd4bf;
+    --orange: #f97316;
+    --pink: #ec4899;
+    --green: #22c55e;
+    --red: #ef4444;
+    --yellow: #eab308;
+    --blue: #3b82f6;
+    --amber: #f59e0b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(45, 212, 191, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 50%, rgba(239, 68, 68, 0.06) 0%, transparent 60%);
+  }
+
+  .hero-content { position: relative; max-width: 800px; }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff 0%, #5eead4 50%, #14b8a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem; font-weight: 300; }
+  .hero-meta { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-muted); }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+  section { padding: 5rem 0; }
+  .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2; }
+  h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; }
+  p { color: var(--text-muted); margin-bottom: 1.2rem; font-size: 1.05rem; }
+  .full-image { width: 100%; border-radius: 16px; margin: 2rem 0; border: 1px solid var(--border); }
+  .takeaways { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin: 2rem 0; }
+  .takeaway { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: border-color 0.3s, transform 0.2s; }
+  .takeaway:hover { border-color: var(--teal); transform: translateY(-2px); }
+  .takeaway-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 8px; font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem; }
+  .takeaway h3 { margin-bottom: 0.5rem; }
+  .takeaway p { margin-bottom: 0; font-size: 0.95rem; }
+
+  .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; text-align: center; }
+  .stat-number { font-size: 2.5rem; font-weight: 800; line-height: 1; margin-bottom: 0.3rem; }
+  .stat-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+
+  blockquote {
+    border-left: 3px solid var(--teal);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    background: var(--accent-glow);
+    border-radius: 0 12px 12px 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text);
+  }
+  blockquote cite { display: block; margin-top: 0.8rem; font-size: 0.85rem; font-style: normal; color: var(--text-muted); }
+
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 3rem 0; }
+
+  .study-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin: 2rem 0; }
+  .study-card img { width: 100%; display: block; }
+  .study-card-body { padding: 2rem; }
+  .study-card-body h3 { margin-bottom: 0.8rem; }
+
+  .compare-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.9rem; }
+  .compare-table thead { background: var(--surface-2); }
+  .compare-table th { padding: 1rem; text-align: left; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+  .compare-table td { padding: 1rem; border-bottom: 1px solid var(--border); color: var(--text-muted); }
+  .compare-table tr:hover td { background: var(--surface); }
+  .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
+  .badge-teal { background: rgba(45, 212, 191, 0.15); color: var(--teal); }
+  .badge-orange { background: rgba(249, 115, 22, 0.15); color: var(--orange); }
+  .badge-red { background: rgba(239, 68, 68, 0.15); color: var(--red); }
+  .badge-blue { background: rgba(59, 130, 246, 0.15); color: var(--blue); }
+  .badge-green { background: rgba(34, 197, 94, 0.15); color: var(--green); }
+  .badge-yellow { background: rgba(234, 179, 8, 0.15); color: var(--yellow); }
+
+  /* Myth buster */
+  .myth-box {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.02));
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  .myth-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 0.8rem; }
+  .truth-box {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(34, 197, 94, 0.02));
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  .truth-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 0.8rem; }
+
+  .footer { text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.85rem; }
+  .footer a { color: var(--teal); text-decoration: none; }
+  .footer a:hover { text-decoration: underline; }
+  .yt-link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.6rem; background: var(--red); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: opacity 0.2s; }
+  .yt-link:hover { opacity: 0.9; text-decoration: none; }
+  .nav-link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; border: 1px solid var(--border); color: var(--text-muted); text-decoration: none; border-radius: 8px; font-size: 0.85rem; transition: all 0.2s; margin: 0 0.3rem; }
+  .nav-link:hover { border-color: var(--teal); color: var(--text); }
+
+  @media (max-width: 768px) {
+    .stats-row { grid-template-columns: 1fr 1fr; }
+    section { padding: 3rem 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Episode 3 of 6 &middot; Guest Series</div>
+    <h1>How to Build Physical Endurance &amp; Lose Fat</h1>
+    <p class="hero-subtitle">Dr. Galpin reveals that fat loss is literally breathing out carbon, debunks the "fat burning zone" myth, and delivers protocols for all four types of endurance.</p>
+    <div class="hero-meta">
+      <span>Dr. Andrew Huberman &amp; Dr. Andy Galpin</span>
+      <span>Huberman Lab Podcast</span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- THE BIG IDEA: ENDURANCE = FATIGUE + FUEL -->
+  <section>
+    <div class="section-label">The Framework</div>
+    <h2>Endurance comes down to two things: fatigue management and fuel</h2>
+    <p>Everything about endurance — whether you're running a marathon or climbing a flight of stairs — reduces to your body's ability to (1) manage fatigue signals and (2) produce and deliver energy. Most people think their limitation is one of these when it's actually the other.</p>
+
+    <img src="images/four-endurance-types.png" alt="The four types of endurance" class="full-image">
+
+    <p>There are <strong style="color: var(--text);">four distinct types of endurance</strong>, each with different energy demands and training protocols:</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Duration</th>
+          <th>Example</th>
+          <th>Primary Limiter</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong style="color: var(--orange);">Muscular Endurance</strong></td>
+          <td><span class="badge badge-orange">5-50 reps</span></td>
+          <td>Push-ups, stair climbing, carrying groceries</td>
+          <td>Local muscle fatigue (not cardiovascular)</td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--red);">Anaerobic Capacity</strong></td>
+          <td><span class="badge badge-red">30-120 sec</span></td>
+          <td>Sprint, surfing paddle-out, steep hill</td>
+          <td>Acid buildup, hydrogen ion accumulation</td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--blue);">Max Aerobic (VO2 Max)</strong></td>
+          <td><span class="badge badge-blue">8-15 min</span></td>
+          <td>Running a mile, 2K row</td>
+          <td>Oxygen delivery and utilization</td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--teal);">Long Duration</strong></td>
+          <td><span class="badge badge-teal">20-60+ min</span></td>
+          <td>Long run, bike ride, hiking</td>
+          <td>Fuel depletion, heat, hydration</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Plus two often-overlooked dimensions: <strong style="color: var(--text);">sustained daily energy</strong> (not crashing at 2pm) and <strong style="color: var(--text);">postural endurance</strong> (maintaining position without breakdown). Both are endurance problems most people don't recognize as such.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- THE QUICKEST WIN -->
+  <section>
+    <div class="section-label">Quickest Win</div>
+    <h2>The fastest way to improve endurance isn't more miles — it's better mechanics</h2>
+
+    <blockquote>
+      "The quickest way to improve endurance is to improve mechanics. And the mechanical thing I would go after first is your breathing."
+      <cite>— Dr. Andy Galpin</cite>
+    </blockquote>
+
+    <p>Galpin's hierarchy for rapid endurance improvement:</p>
+    <div class="takeaways">
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(45, 212, 191, 0.15); color: var(--teal);">1</div>
+        <h3>Fix your breathing (nasal breathing as the "cheat code")</h3>
+        <p>Nasal breathing forces proper mechanics by default — it slows breathing rate, improves CO2 tolerance, and prevents the over-breathing that drains you prematurely. Use it as your first intervention for any endurance limitation.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(249, 115, 22, 0.15); color: var(--orange);">2</div>
+        <h3>Fix your posture</h3>
+        <p>Hunching compresses your rib cage against your femur (especially on bikes). This restricts breathing volume and forces compensatory patterns. Stay upright — efficiency trumps force for endurance.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(59, 130, 246, 0.15); color: var(--blue);">3</div>
+        <h3>Fix your movement technique</h3>
+        <p>Small mechanical leaks don't matter for one rep. Over thousands of reps, they compound into massive energy waste. A 2% efficiency improvement over a 10K run is enormous.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- EXERCISE SNACKS -->
+  <section>
+    <div class="section-label">Micro-Protocol</div>
+    <h2>Exercise snacks: 20 seconds that actually move the needle</h2>
+
+    <div class="study-card">
+      <img src="images/exercise-snacks.png" alt="Exercise snacks — 20-second stair sprints">
+      <div class="study-card-body">
+        <h3>Canadian research: 20-second bursts, 3x per day, measurable VO2 Max improvement in 6 weeks</h3>
+        <p>Run up stairs or do any all-out effort for 20 seconds, repeated every 4 hours throughout the day. No gym, no shower, no gear. After 18 sessions across 6 weeks, participants showed <strong style="color: var(--text);">statistically significant improvements</strong> in VO2 Max, cardiorespiratory fitness, and cognitive performance.</p>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-number" style="color: var(--teal);">20s</div>
+        <div class="stat-label">Duration per burst</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="color: var(--orange);">3x</div>
+        <div class="stat-label">Times per day</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="color: var(--blue);">6</div>
+        <div class="stat-label">Weeks to see results</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="color: var(--green);">0</div>
+        <div class="stat-label">Equipment needed</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FAT LOSS = BREATHING -->
+  <section>
+    <div class="section-label">The Revelation</div>
+    <h2>Fat loss is literally breathing out carbon</h2>
+
+    <img src="images/fat-loss-breathing.png" alt="Fat loss through CO2 exhalation" class="full-image">
+
+    <p>This is the episode's most mind-bending insight. <strong style="color: var(--text);">All metabolism is about breaking carbon bonds.</strong> When you "burn" fat, the carbon atoms from fat molecules are bound to oxygen in your cells and exhaled as CO2. The water (H2O) leaves through sweat and urine.</p>
+
+    <blockquote>
+      "Fat loss is carbon in, carbon out. To lose fat, you must exhale more carbon than you consume. That's the entire mechanism."
+      <cite>— Dr. Andy Galpin</cite>
+    </blockquote>
+
+    <p>This reframes everything: food is carbon input, breathing is carbon output. Exercise increases the rate of carbon exhalation. Sleep, walking, fidgeting — all of it contributes to the "carbon out" side of the equation.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- MYTH BUSTING -->
+  <section>
+    <div class="section-label">Myth Busting</div>
+    <h2>The "fat burning zone" is real but misleading</h2>
+
+    <img src="images/crossover-concept.png" alt="The crossover concept — fuel mix by intensity" class="full-image">
+
+    <p>The <strong style="color: var(--text);">crossover concept</strong> explains how fuel mix changes with exercise intensity:</p>
+
+    <div class="myth-box">
+      <div class="myth-label">Common Belief</div>
+      <h3 style="margin-bottom: 0.5rem;">"Low-intensity exercise burns more fat, so it's better for fat loss"</h3>
+      <p style="margin: 0;">At rest/sleep you burn ~70% fat as fuel. During low-intensity exercise, fat percentage is high. During high-intensity, you burn almost 100% carbs. So the "fat burning zone" exists — low intensity does burn a higher <em>percentage</em> of fat.</p>
+    </div>
+
+    <div class="truth-box">
+      <div class="truth-label">The Reality</div>
+      <h3 style="margin-bottom: 0.5rem;">Burning fat as fuel ≠ losing body fat</h3>
+      <p style="margin: 0;">Fat loss is about <strong style="color: var(--text);">total carbon output</strong>, not what percentage of fuel comes from fat during exercise. High-intensity exercise burns more total calories (and therefore more total carbon), even though a lower percentage comes from fat. Sleep burns the highest <em>percentage</em> of fat of any activity — but nobody recommends sleeping more for fat loss.</p>
+    </div>
+
+    <div class="myth-box">
+      <div class="myth-label">Another Myth</div>
+      <h3 style="margin-bottom: 0.5rem;">"Eating carbs late at night makes you fat"</h3>
+      <p style="margin: 0;">Decades of research show evening carb consumption does not increase fat gain. Athletes often eat high-carb meals in the evening for sleep quality and glycogen restoration. <strong style="color: var(--text);">Meal timing is not a meaningful variable for fat loss</strong> — total caloric intake and training stimulus are what matter.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ENERGY SYSTEMS -->
+  <section>
+    <div class="section-label">The Science</div>
+    <h2>Your body's three fuel systems (and why lactate isn't the villain)</h2>
+
+    <img src="images/energy-systems.png" alt="Three energy systems" class="full-image">
+
+    <div class="takeaways">
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(255, 255, 255, 0.1); color: #fff;">⚡</div>
+        <h3>Phosphocreatine: instant power, gone in 8-10 seconds</h3>
+        <p>The fastest energy source. Stored directly in muscle, used for explosive efforts. Replenishes in 3-5 minutes of rest. This is why creatine supplementation works — it increases the stored fuel for this system.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(249, 115, 22, 0.15); color: var(--orange);">🔥</div>
+        <h3>Glycolysis: 30 seconds to 2 minutes of intense work</h3>
+        <p>Breaks down muscle glycogen (stored carbs) without oxygen. Produces pyruvate and free hydrogen ions. The hydrogen ions cause acidity (the "burn"). <strong style="color: var(--text);">Lactate is NOT waste</strong> — it's produced by binding pyruvate to hydrogen ions, actually <em>preventing</em> pH crash. The heart uses lactate as preferred fuel.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(59, 130, 246, 0.15); color: var(--blue);">🫁</div>
+        <h3>Oxidative (aerobic): unlimited duration, lower power</h3>
+        <p>Completes carb breakdown via the Krebs cycle in mitochondria. Also burns fat. Requires oxygen delivery. Produces 28-35 ATP per glucose molecule (vs. 2 from glycolysis alone). <strong style="color: var(--text);">Mitochondrial capacity is the master limiter</strong> — it gates both aerobic AND anaerobic performance.</p>
+      </div>
+    </div>
+
+    <blockquote>
+      "Lactate doesn't cause fatigue — it's a marker of fatigue. High lactate means anaerobic systems are running hard. Lactate is actually buffering the real problem: hydrogen ion accumulation."
+      <cite>— Dr. Andy Galpin</cite>
+    </blockquote>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- METABOLIC FLEXIBILITY -->
+  <section>
+    <div class="section-label">Practical Tests</div>
+    <h2>Metabolic flexibility: can you use both fuel sources well?</h2>
+
+    <p><strong style="color: var(--text);">Metabolic flexibility</strong> means efficiently switching between fat and carbs depending on context. It's NOT about maximizing fat burning — it's about using the right fuel for the right demand.</p>
+
+    <div class="takeaways">
+      <div class="takeaway">
+        <h3>Test your fat utilization</h3>
+        <p>Run a familiar 15-minute loop fully fasted. If your pace barely drops vs. fed, your fat utilization is good. If you <strong style="color: var(--text);">need caffeine to function in the morning before eating</strong>, that's a red flag for poor fat utilization.</p>
+      </div>
+      <div class="takeaway">
+        <h3>Test your carb utilization</h3>
+        <p>Eat 50g of carbs. If you <strong style="color: var(--text);">crash 30 minutes later</strong>, your carb regulation needs work. Good carb utilization = stable energy after eating, no spike-and-crash pattern.</p>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-number" style="color: var(--green);">&le;85</div>
+        <div class="stat-label">Fasting blood glucose target (mg/dL)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="color: var(--teal);">&lt;0.8</div>
+        <div class="stat-label">AST/ALT ratio target</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="color: var(--orange);">6%</div>
+        <div class="stat-label">Diabetes risk increase per mg/dL above 85</div>
+      </div>
+    </div>
+
+    <p><strong style="color: var(--text);">To improve carb utilization:</strong> eat carbs before high-intensity exercise. <strong style="color: var(--text);">To improve fat utilization:</strong> do low-intensity work fasted or with fat only. Specificity applies — practice the fuel source you want to adapt to.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- KEY TAKEAWAYS -->
+  <section>
+    <div class="section-label">Summary</div>
+    <h2>6 Things to Remember</h2>
+
+    <div class="takeaways">
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(45, 212, 191, 0.15); color: var(--teal);">1</div>
+        <h3>Fat loss = exhaling carbon</h3>
+        <p>All fat loss happens through CO2 exhalation. Food is carbon in, breathing is carbon out. Exercise increases the rate. This is the entire mechanism — everything else is detail.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(239, 68, 68, 0.15); color: var(--red);">2</div>
+        <h3>The "fat burning zone" is misleading</h3>
+        <p>Low-intensity burns a higher percentage of fat as fuel, but high-intensity burns more total carbon. Sleep burns the highest percentage of fat. Total energy expenditure is what drives fat loss, not fuel source during exercise.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(249, 115, 22, 0.15); color: var(--orange);">3</div>
+        <h3>Fix breathing before adding miles</h3>
+        <p>Nasal breathing, upright posture, and efficient movement technique will improve your endurance faster than grinding out more volume with bad mechanics.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(59, 130, 246, 0.15); color: var(--blue);">4</div>
+        <h3>Exercise snacks work</h3>
+        <p>20-second all-out stair sprints, 3x per day, 3x per week for 6 weeks = measurable VO2 Max improvement. No gym, no shower, no excuses.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(34, 197, 94, 0.15); color: var(--green);">5</div>
+        <h3>Lactate is fuel, not waste</h3>
+        <p>Lactate buffers acidity and serves as fuel for the heart. It doesn't cause fatigue — it's a marker of high anaerobic demand. The real villain is hydrogen ion accumulation.</p>
+      </div>
+      <div class="takeaway">
+        <div class="takeaway-number" style="background: rgba(236, 72, 153, 0.15); color: var(--pink);">6</div>
+        <h3>Build metabolic flexibility, not just "fat adaptation"</h3>
+        <p>The goal isn't to maximize fat burning — it's to efficiently switch between fuel sources based on demand. Test with fasted runs and post-carb energy stability.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- WATCH -->
+  <section style="text-align: center; padding: 4rem 0;">
+    <h2>Watch the Full Episode</h2>
+    <div style="text-align: left; max-width: 620px; margin: 0 auto 2rem;">
+      <ul style="list-style: none; padding: 0;">
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
+          <a href="https://www.youtube.com/watch?v=oNkDA2F7CjM&t=1383s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--teal);"><strong>The carbon cycle of metabolism</strong></a> — how oxygen, carbon, and respiration form the foundation of all energy production and fat loss
+        </li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
+          <a href="https://www.youtube.com/watch?v=oNkDA2F7CjM&t=2552s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--teal);"><strong>Cardiac output & stroke volume</strong></a> — why maximum heart rate doesn't increase with training but stroke volume does, and what that means for fitness
+        </li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
+          <a href="https://www.youtube.com/watch?v=oNkDA2F7CjM&t=3770s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--teal);"><strong>Glycogen depletion & "bonking"</strong></a> — the hierarchy of energy storage, what happens at 75% glycogen depletion, and why liver depletion causes total shutdown
+        </li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
+          <a href="https://www.youtube.com/watch?v=oNkDA2F7CjM&t=6100s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--teal);"><strong>The complete Krebs cycle walkthrough</strong></a> — how aerobic metabolism completes carb breakdown in mitochondria, producing 28-35 ATP per glucose
+        </li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted);">
+          <a href="https://www.youtube.com/watch?v=oNkDA2F7CjM&t=4427s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--teal);"><strong>Metabolic flexibility testing protocol</strong></a> — practical fasted-run and post-carb tests, plus biomarker targets (blood glucose, AST/ALT)
+        </li>
+        <li style="padding: 0.6rem 0; color: var(--text-muted);">
+          <a href="https://www.youtube.com/watch?v=oNkDA2F7CjM&t=5137s" target="_blank" style="color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--teal);"><strong>Fueling strategies by training type</strong></a> — when to eat carbs vs. fast, how protein and fiber affect glucose response, and why meal timing doesn't matter for fat loss
+        </li>
+      </ul>
+    </div>
+    <a href="https://www.youtube.com/watch?v=oNkDA2F7CjM" class="yt-link" target="_blank">
+      &#9654; Watch on YouTube
+    </a>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- NAV -->
+  <section style="text-align: center; padding: 2rem 0;">
+    <a href="../episode-1-summary/index.html" class="nav-link">&larr; Episode 1</a>
+    <a href="../episode-2-summary/index.html" class="nav-link">&larr; Episode 2</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Summary generated by Luo Ji &middot; Full transcript available at <a href="http://100.89.76.77:8888/browse/Users/luo/work/huberman-galpin-transcripts">file browser</a></p>
+  <p style="margin-top: 0.5rem;">Huberman Lab Guest Series with Dr. Andy Galpin &middot; Episode 3 of 6</p>
+</footer>
+
+</body>
+</html>
